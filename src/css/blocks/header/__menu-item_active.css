@@ -1,0 +1,7 @@
+.header__menu-item_active { 
+    border-bottom: 3px solid #ffffff;
+}
+
+.header__menu-item.header__menu-item_active {
+    color: #ffffff;
+}

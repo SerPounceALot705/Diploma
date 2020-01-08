@@ -1,3 +1,9 @@
+@import url(/src/vendor/normalize.css);
+@import url(/src/vendor/fonts.css);
+@import url(/src/css/blocks/header/header.css);
+
 body {
-    background-color:brown;
+    background-color:#ffffff;
+    margin: 0;
+    padding: 0;
 }

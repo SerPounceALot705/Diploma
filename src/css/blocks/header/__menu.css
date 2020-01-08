@@ -1,0 +1,9 @@
+.header__menu {
+    margin-right: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__menu :first-child {
+    margin-right: 34px;
+}

@@ -1,0 +1,10 @@
+.header__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #FFFFFF;
+    z-index: 1;
+    flex-direction: column;
+    align-items: center;
+    max-width: 608px;
+}
