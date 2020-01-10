@@ -1,9 +1,27 @@
 .header__menu {
     margin-right: 10%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
 .header__menu :first-child {
     margin-right: 34px;
+}
+
+@media screen and (max-width: 767px) and (min-width: 425px) {
+    .header__menu :first-child {
+        margin-right: 11px;
+    }
+    .header__menu {
+        margin-right: 14px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .header__menu :first-child {
+        margin-right: 11px;
+    }
+    .header__menu {
+        margin-right: 14px;
+    }
 }

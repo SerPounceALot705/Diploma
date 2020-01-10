@@ -9,3 +9,4 @@ class main {
 (function abc() {
     const _main = new main();
 })();
+

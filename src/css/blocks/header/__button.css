@@ -30,3 +30,21 @@
     background: #2A65CC;
     cursor: pointer;
 }
+
+@media screen and (max-width: 767px) and (min-width: 425px) {
+    .header__button {
+        width: 288px;
+        height: 56px;
+        position: relative;
+        margin-bottom: 32px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .header__button {
+        width: 288px;
+        height: 56px;
+        position: relative;
+        margin-bottom: 32px;
+    }
+}

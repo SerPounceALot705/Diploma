@@ -8,3 +8,29 @@
     max-width: 100%;
     margin-bottom: 64px;
 }
+
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    .header__subtitle {
+        width: 452px;
+        margin-bottom: 24px;
+    }
+}
+
+@media screen and (max-width: 767px) and (min-width: 425px) {
+    .header__subtitle {
+        width: 288px;
+        font-size: 20px;
+        line-height: 26px;
+        margin-bottom: 24px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .header__subtitle {
+        width: 288px;
+        font-size: 20px;
+        line-height: 26px;
+        margin-bottom: 24px;
+    }
+}

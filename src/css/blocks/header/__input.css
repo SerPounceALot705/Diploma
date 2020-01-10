@@ -28,4 +28,20 @@
 
 .header__input:focus .header__button {
     background: #347EFF;
- }
+}
+
+@media screen and (max-width: 767px) and (min-width: 425px) {
+    .header__input {
+        width: 288px;
+        height: 56px;
+        margin-bottom: 16px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .header__input {
+        width: 288px;
+        height: 56px;
+        margin-bottom: 16px;
+    }
+}
