@@ -1,0 +1,13 @@
+.card-link {
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    color: #B6BCBF;
+    position: absolute;
+    left: 24px;
+    bottom: 24px;
+}

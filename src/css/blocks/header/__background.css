@@ -5,7 +5,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    min-height: 576px;
+    height: 576px;
 }
 
 @media screen and (max-width: 1024px) and (min-width: 768px) {
@@ -17,13 +17,13 @@
 
 @media screen and (max-width: 767px) and (min-width: 425px) {
     .header__background  {
-        min-height: 536px;
+        min-height: 576px;
     }
 }
 
 @media screen and (max-width: 425px) {
     .header__background  {
-        min-height: 536px;
+        min-height: 576px;
     }
 }
 

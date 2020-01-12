@@ -15,7 +15,8 @@ module.exports = {
     module: {
         rules: [{
                 test: /\.js$/,
-                use: { loader: "babel-loader" },
+                include: path.resolve(__dirname, './src/js/index.js'),
+                use: { loader: "babel-loader"},
                 exclude: /node_modules/
             },
             {
@@ -47,6 +48,11 @@ module.exports = {
             inject: false,
             template: './src/index.html',
             filename: 'index.html'
+        }),
+        new HtmlWebpackPlugin({
+            inject: false,
+            template: './src/about.html',
+            filename: 'about.html'
         }),
         new MiniCssExtractPlugin({
             filename: 'index.[contenthash].css'

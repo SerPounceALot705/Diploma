@@ -1,0 +1,7 @@
+.searching-results__container-analitics {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 80px auto 64px;
+    max-width: 1232px;
+}

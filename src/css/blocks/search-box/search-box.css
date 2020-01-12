@@ -1,0 +1,32 @@
+@import url('__loading.css');
+@import url('__report.css');
+@import url('__text.css');
+@import url('__message.css');
+
+.search-box {
+    width: 100%;
+    min-height: 282px;
+    background: #F5F6F7;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    .search-box {
+        max-width: 1024px;
+    }
+}
+
+@media screen and (max-width: 767px) and (min-width: 425px) {
+    .search-box {
+        max-width: 767px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .search-box {
+        max-width: 425px;
+    }
+}

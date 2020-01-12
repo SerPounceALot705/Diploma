@@ -1,0 +1,31 @@
+.searching-results__button {
+    width: 288px;
+    height: 64px;
+    background: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 80px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #1A1B22;
+    margin-bottom: 64px;
+}
+
+.searching-results__button:hover {
+    background: #FFFFFF;
+    opacity: 0.9;
+    outline: none;
+    cursor: pointer;
+    -webkit-transition: all .1s linear;
+    -moz-transition: all .1s linear;
+    -ms-transition: all .1s linear;
+    -o-transition: all .1s linear;
+    transition: all .1s linear;
+}
+
+/*не работает*/
+.header__button:active {
+    outline: none;
+}

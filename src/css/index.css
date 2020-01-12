@@ -1,6 +1,8 @@
 @import url(/src/vendor/normalize.css);
 @import url(/src/vendor/fonts.css);
 @import url(/src/css/blocks/header/header.css);
+@import url(/src/css/blocks/search-box/search-box.css);
+@import url(/src/css/blocks/searching-results/searching-results.css);
 
 body {
     background-color:#ffffff;
