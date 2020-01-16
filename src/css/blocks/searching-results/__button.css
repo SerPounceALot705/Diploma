@@ -14,7 +14,8 @@
 }
 
 .searching-results__button:hover {
-    background: #FFFFFF;
+    background: rgba(232, 232, 232, .5);
+    border: 1px solid rgba(232, 232, 232, .5);
     opacity: 0.9;
     outline: none;
     cursor: pointer;
@@ -25,7 +26,25 @@
     transition: all .1s linear;
 }
 
-/*не работает*/
-.header__button:active {
+
+.searching-results__button:focus {
     outline: none;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    .searching-results__button {
+        height: 56px;
+    }
+}
+
+@media screen and (max-width: 767px) and (min-width: 425px) {
+    .searching-results__button {
+        height: 56px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .searching-results__button {
+        height: 56px;
+    }
 }

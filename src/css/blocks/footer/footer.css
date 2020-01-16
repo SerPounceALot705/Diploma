@@ -1,0 +1,45 @@
+@import url('__author.css');
+@import url('__links.css');
+@import url('__social-network.css');
+@import url('__social-icon.css');
+@import url('__main.css');
+@import url('__about.css');
+@import url('__yandex-practicum.css');
+@import url('__container.css');
+
+.footer {
+    max-width: 1440px;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin:0 auto;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    .footer {
+        max-width: 1024px;
+    }
+}
+
+@media screen and (max-width: 767px) and (min-width: 425px) {
+    .footer {
+        max-width: 600px;
+        height: 224px; 
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 0 30px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .footer {
+        max-width: 425px;
+        height: 224px;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 0 16px;
+    }
+}

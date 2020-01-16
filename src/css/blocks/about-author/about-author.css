@@ -1,0 +1,22 @@
+@import url('author-img.css');
+@import url('__container.css');
+@import url('__text.css');
+@import url('__title.css');
+@import url('__subtitle.css');
+
+.about-author {
+    width: 100%;
+}
+
+@media screen and (max-width: 767px) and (min-width: 425px) {
+    .about-author {
+        min-height: 744px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .about-author {
+        min-height: 744px;
+    }
+}
+

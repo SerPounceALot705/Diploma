@@ -1,0 +1,27 @@
+.author-img {
+    max-width: 464px;
+    max-height: 464px;
+    border-radius: 1000px;
+    margin-right: 56px;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    .author-img {
+        max-width: 232px;
+        margin-right: 32px;
+    }
+}
+
+@media screen and (max-width: 767px) and (min-width: 425px) {
+    .author-img {
+        max-width: 272px;
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .author-img {
+        max-width: 272px;
+        margin-right: 0;
+    }
+}

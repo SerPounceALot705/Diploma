@@ -7,13 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
     <title>NewsAnalizer</title>
-    <link rel="icon" href="<%=require('./images/A.svg').default%>">
+    <link rel="icon" href="<%=require('./images/A.png').default%>" alt="favicon.svg">
 </head>
 
 <body class="page">
     <section class="header">
         <img src="<%=require('./images/georgia-de-lotz--UsJoNxLaNo-unsplash.png').default%>" class="header__background"
-            alt="logo.png">
+            alt="logo.png" alt="logo.png">
         <div class="header__container-menu">
             <div class="logo">NewsAnalizer</div>
             <nav class="header__menu">
@@ -34,90 +34,126 @@
         </div>
     </section>
     <section class="search-box">
-        <img class="search-box__loading" src="<%=require('./images/Ellipse.png').default%>">
+        <img class="search-box__loading" src="<%=require('./images/Ellipse.png').default%>" alt="loading.png">
         <h2 class="search-box__message">Идет поиск новостей...</h2>
     </section>
     <section class="search-box">
-        <img class="search-box__result" src="<%=require('./images/not-found_v1.png').default%>">
+        <img class="search-box__result" src="<%=require('./images/not-found_v1.png').default%>" alt="result.png">
         <p class="search-box__report">Ничего не найдено</p>
         <h2 class="search-box__message">К сожалению по вашему запросу ничего не найдено.</h2>
     </section>
-    <section class="searching-results">
-        <div class="searching-results__container-analitics">
-            <h2 class="searching-results__title">Результаты поиска</h2>
-            <a class="searching-results__analitics">Посмотреть аналитику ></a>
-        </div>    
+    <section class="search-box">
+        <div class="searching-results">
+            <div class="searching-results__container-analitics">
+                <h2 class="searching-results__title">Результаты поиска</h2>
+                <a class="searching-results__analitics">Посмотреть аналитику ></a>
+            </div>
             <div class="searching-results__container">
                 <div class=card>
-                    <img class=card-image src="<%=require('./images/image_08.png').default%>">
+                    <img class=card-image src="<%=require('./images/image_08.png').default%>" alt="card-image.png">
                     <div class="card-info">
-                    <time class="data">2 августа, 2019</time>
-                    <h2 class="card-title">Национальное достояние – парки</h2>
-                    <p class="card-text">В 2016 году Америка отмечала важный юбилей: 
-                        сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, 
-                        где и сегодня каждый может приобщиться к природе.</p>
-                    <a class="card-link">Лента.ру</a>
+                        <time class="data">2 августа, 2019</time>
+                        <h2 class="card-title">Национальное достояние – парки</h2>
+                        <p class="card-text">В 2016 году Америка отмечала важный юбилей:
+                            сто лет назад здесь начала складываться система национальных парков – охраняемых территорий,
+                            где и сегодня каждый может приобщиться к природе.</p>
+                        <a class="card-link">Лента.ру</a>
                     </div>
                 </div>
                 <div class=card>
-                    <img class=card-image src="<%=require('./images/image_04.png').default%>">
+                    <img class=card-image src="<%=require('./images/image_04.png').default%>" alt="card-image.png">
                     <div class="card-info">
-                    <time class="data">2 августа, 2019</time>
-                    <h2 class="card-title">Лесные огоньки: история одной фотографии</h2>
-                    <p class="card-text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, 
-                        чтобы запечатлеть ускользающую красоту одного 
-                        из местных чудес природы.</p>
-                    <a class="card-link">Медуза</a>
+                        <time class="data">2 августа, 2019</time>
+                        <h2 class="card-title">Лесные огоньки: история одной фотографии</h2>
+                        <p class="card-text">Фотограф отвлеклась от освещения суровой политической реальности Мексики,
+                            чтобы запечатлеть ускользающую красоту одного
+                            из местных чудес природы.</p>
+                        <a class="card-link">Медуза</a>
                     </div>
                 </div>
                 <div class=card>
-                    <img class=card-image src="<%=require('./images/image_07.png').default%>">
+                    <img class=card-image src="<%=require('./images/image_07.png').default%>" alt="card-image.png">
                     <div class="card-info">
-                    <time class="data">2 августа, 2019</time>
-                    <h2 class="card-title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h2>
-                    <p class="card-text">Знаменитый фотограф снимает первозданные леса России, 
-                        чтобы рассказать о необходимости их сохранения. 
-                        В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
-                    <a class="card-link">Риа</a>
+                        <time class="data">2 августа, 2019</time>
+                        <h2 class="card-title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h2>
+                        <p class="card-text">Знаменитый фотограф снимает первозданные леса России,
+                            чтобы рассказать о необходимости их сохранения.
+                            В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
+                        <a class="card-link">Риа</a>
                     </div>
                 </div>
                 <div class=card>
-                    <img class=card-image src="<%=require('./images/image_06.png').default%>">
+                    <img class=card-image src="<%=require('./images/image_06.png').default%>" alt="card-image.png">
                     <div class="card-info">
-                    <time class="data">2 августа, 2019</time>
-                    <h2 class="card-title">Национальное достояние – парки</h2>
-                    <p class="card-text">В 2016 году Америка отмечала важный юбилей: 
-                        сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, 
-                        где и сегодня каждый может приобщиться к природе.</p>
-                    <a class="card-link">Дзен</a>
+                        <time class="data">2 августа, 2019</time>
+                        <h2 class="card-title">Национальное достояние – парки</h2>
+                        <p class="card-text">В 2016 году Америка отмечала важный юбилей:
+                            сто лет назад здесь начала складываться система национальных парков – охраняемых территорий,
+                            где и сегодня каждый может приобщиться к природе.</p>
+                        <a class="card-link">Дзен</a>
                     </div>
                 </div>
                 <div class=card>
-                    <img class=card-image src="<%=require('./images/image_01.png').default%>">
+                    <img class=card-image src="<%=require('./images/image_01.png').default%>" alt="card-image.png">
                     <div class="card-info">
-                    <time class="data">2 августа, 2019</time>
-                    <h2 class="card-title">Лесные огоньки: история одной фотографии</h2>
-                    <p class="card-text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, 
-                        чтобы запечатлеть ускользающую красоту одного 
-                        из местных чудес природы.</p>
-                    <a class="card-link">Афиша</a>
+                        <time class="data">2 августа, 2019</time>
+                        <h2 class="card-title">Лесные огоньки: история одной фотографии</h2>
+                        <p class="card-text">Фотограф отвлеклась от освещения суровой политической реальности Мексики,
+                            чтобы запечатлеть ускользающую красоту одного
+                            из местных чудес природы.</p>
+                        <a class="card-link">Афиша</a>
                     </div>
                 </div>
                 <div class=card>
-                    <img class=card-image src="<%=require('./images/image_05.png').default%>">
+                    <img class=card-image src="<%=require('./images/image_05.png').default%>" alt="card-image.png">
                     <div class="card-info">
-                    <time class="data">2 августа, 2019</time>
-                    <h2 class="card-title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h2>
-                    <p class="card-text">Знаменитый фотограф снимает первозданные леса России, 
-                        чтобы рассказать о необходимости их сохранения. 
-                        В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
-                    <a class="card-link">Медиазона</a>
+                        <time class="data">2 августа, 2019</time>
+                        <h2 class="card-title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h2>
+                        <p class="card-text">Знаменитый фотограф снимает первозданные леса России,
+                            чтобы рассказать о необходимости их сохранения.
+                            В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
+                        <a class="card-link">Медиазона</a>
                     </div>
                 </div>
             </div>
             <button class="searching-results__button">Показать еще</button>
-       
+        </div>
     </section>
+    <section class="about-author">
+        <div class="about-author__container">
+            <img class="author-img" src="<%=require('./images/image-03.png').default%>" alt="author-img.png">
+            <div class="about-author__text">
+                <h2 class="about-author__title">Об авторе</h2>
+                <p class="about-author__subtitle">Меня зовут Валерия. Я окончила Восточно-Сибирский государственный
+                    университет технологий и управления в 2015 году
+                    по направлению "Программная инженерия". Моя специальность - это "Сопровождение и эксплуатация
+                    программных средств".
+                    После университета работата системным администратором в фирмах своего города, обучалась frontend
+                    разработке. В данный момент занимаюсь разработкой клиентской части сайта.
+                    В работе использую HTML 5, СSS, JavaScript, Webpack.
+                </p>
+                <p class="about-author__subtitle">Фронтэнд изучала в "ЯндексПрактикум", поэтому владею всеми последними
+                    стандартами разработки. Могу помочь заказчикам с созданием сайта.</p>
+                <p class="about-author__subtitle">Мои контактные данные: e-mail: dmitryuk.valerie@yandex.ru</p>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer__author"> &copy; 2019  Supersite</div>
+        <nav class="footer__links">
+            <a class="footer__main">Главная</a>
+            <a class="footer__about">О проекте</a>
+            <a class="footer__yandex-practicum">ЯндексПрактикум</a>
+        </nav>
+        <div class="footer__social-network">
+            <a href="https://github.com/SerPounceALot705">
+                <img class="footer__social-icon" src="<%=require('./images/git.png').default%>" alt="gitHub-icon.png">
+            </a>
+            <a href="https://www.facebook.com/">
+                <img class="footer__social-icon" src="<%=require('./images/facebook.png').default%>" alt="facebook-icon.png">
+            </a>
+        </div>
+    </footer>
     <script type="module" src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
 </body>
 

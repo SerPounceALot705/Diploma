@@ -1,0 +1,23 @@
+.footer__author {
+    max-width: 200px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #B6BCBF;
+}
+
+@media screen and (max-width: 767px) and (min-width: 425px) {
+    .footer__author {
+       order: 3;
+       flex-wrap: wrap; 
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .footer__author {
+      order: 3; 
+      flex-wrap: wrap;
+    }
+}
