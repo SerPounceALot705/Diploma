@@ -1,10 +1,12 @@
 @import url(/src/vendor/normalize.css);
 @import url(/src/vendor/fonts.css);
+@import url(/src/css/blocks/page.css);
 @import url(/src/css/blocks/header/header.css);
 @import url(/src/css/blocks/search-box/search-box.css);
 @import url(/src/css/blocks/searching-results/searching-results.css);
 @import url(/src/css/blocks/about-author/about-author.css);
 @import url(/src/css/blocks/footer/footer.css);
+@import url(/src/css/blocks/about-project/about-project.css);
 
 body {
     background-color:#ffffff;

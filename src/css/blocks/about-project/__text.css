@@ -1,0 +1,27 @@
+.about-project__text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    max-width: 815px;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    .about-project__text {
+        max-width: 1024px
+    }
+}
+
+@media screen and (max-width: 767px) and (min-width: 425px) {
+    .about-project__text {
+        max-width: 767px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .about-project__text {
+     
+        max-width: 425px;
+    }
+}

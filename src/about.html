@@ -9,18 +9,37 @@
     <title>NewsAnalizer</title>
     <link rel="icon" href="<%=require('./images/A.png').default%>">
 </head>
-<body>
-<section class="about">
-    <div class="header__container-menu">
-        <div class="logo">NewsAnalizer</div>
-        <nav class="header__menu">
-            <a class="header__menu-item header__menu-item_active">Главная</a>
-            <a class="header__menu-item">О проекте</a>
-        </nav>
-    </div>
-</section>
-<h1>hellow World</h1>
-<script type="module" src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+
+<body class="page">
+    <section class="about">
+        <div class="header__container-menu header__container-menu_theme_dark">
+            <div class="logo logo_theme_dark">NewsAnalizer</div>
+            <nav class="header__menu header__menu_theme_dark">
+                <a class="header__menu-item header__menu-item_theme_dark" href="<%='./index.html'%>">Главная</a>
+                <a class="header__menu-item header__menu-item_theme_dark header__menu-item_active_theme_dark">О
+                    проекте</a>
+            </nav>
+        </div>
+    </section>
+    <section class="about-project">
+        <h2 class="about-project__title">Клиентам</h2>
+        <div class="about-project__container">
+        <p class=about-project__text>Этот сайт — дипломный проект студента Яндкс.Практикума. Его цель — показать, чему
+            научился студент, и какими технологиями владеет.</p>
+        <p class=about-project__text>Вёртска сайта выполнена по методологии БЭМ. Это делает сайт гибким и
+            масштабируемым. Кроме того, добавлять новые страницы и функциальность проще и быстрее, чем в проектах,
+            выполненных по другим методологиям. Также сайт проще и дешевле поддерживать.</p>
+        <p class=about-project__text>Карточки с новостям приходят с сервера и обрабатываются асихронно. То есть сайт
+            продолжает работать, пока от сервера приходит ответ. Это повышает удобство использования сервиса.</p>
+        <p class=about-project__text>При создании проекта была использона сборка технологией Webpack. Это современных
+            подход к разработке сайтов. Код оптимизируется, а значит, сайт работает быстрее. Также настроена сайт
+            работает в старых браузерах. Даже если посетители — пользователи старых операционных систем у них не будет
+            проблем с отображением. А значит потенциальная аудитория возрастает.</p>
+        <p class=about-project__text>Проект был проверен экспертами Яндекс.Практикума. И если вашему бизнесу нужен сайт,
+            мы рекомендуем обратиться к этому студенту.</p>
+        </div>  
+    </section>
+    <script type="module" src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
 </body>
 
 </html>

@@ -8,6 +8,12 @@
     margin-bottom: 80px;
 }
 
+.header__container-menu_theme_dark {
+    background: #FFFFFF;
+    box-shadow: inset 0px -1px 0px #D1D2D6;
+    margin-bottom: 0;
+}
+
 @media screen and (max-width: 1024px) {
     .header__container-menu {
         max-width: 1024px;
@@ -38,8 +44,8 @@
     .header__container-menu {
         max-width: 425px;
         min-width: 288px;
-        width: 100%;   
-        margin-bottom: 30px; 
+        width: 100%;
+        margin-bottom: 30px;
         min-height: 56px;
     }
 }
