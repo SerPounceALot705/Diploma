@@ -1,0 +1,23 @@
+.technology {
+    margin-right: 56px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.technology:last-child {
+    margin-right: 0;
+}
+
+
+@media screen and (max-width: 767px) and (min-width: 425px) {
+    .technology {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .technology {
+        margin-right: 0;
+    }
+}
