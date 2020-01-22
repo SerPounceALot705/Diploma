@@ -1,0 +1,19 @@
+.glide {
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 767px) and (min-width: 425px) {
+    .glide {
+        width: 95%;
+        max-width: 500px; 
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .glide {
+        width: 100%;
+        max-width: 288px;
+    }
+}
+

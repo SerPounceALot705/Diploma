@@ -1,0 +1,49 @@
+@import url('__container.css');
+@import url('__title.css');
+@import url('__link.css');
+@import url('glide/__slide.css');
+@import url('__date.css');
+@import url('glide/glide.css');
+@import url('glide/__container.css');
+@import url('description__container.css');
+@import url('glide/__img.css');
+@import url('glide/__name.css');
+@import url('glide/__e-mail.css');
+@import url('glide/__text.css');
+@import url('glide/__track.css');
+@import url('glide/__bullets.css');
+@import url('glide/__arrow.css');
+@import url('glide/__arrows.css');
+@import url('__button-link.css');
+
+.history {
+    background: #F5F6F7;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    .history {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+}
+
+@media screen and (max-width: 767px) and (min-width: 425px) {
+    .history {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+
+}
+
+@media screen and (max-width: 425px) {
+    .history {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+}

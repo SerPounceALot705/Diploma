@@ -1,0 +1,32 @@
+.history__container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 64px;
+    margin: 0 10% 64px 10%;
+
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    .history__container {
+        margin: 0 10% 32px 10%;
+    }
+
+}
+
+@media screen and (max-width: 767px) and (min-width: 425px) {
+    .history__container {
+        margin: 0 auto;
+        width: 95%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+}
+
+@media screen and (max-width: 425px) {
+    .history__container {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 425px;
+    }
+}
