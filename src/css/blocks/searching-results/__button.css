@@ -14,6 +14,7 @@
 }
 
 .searching-results__button:hover {
+    cursor: pointer;
     background: rgba(232, 232, 232, .5);
     border: 1px solid rgba(232, 232, 232, .5);
     opacity: 0.9;

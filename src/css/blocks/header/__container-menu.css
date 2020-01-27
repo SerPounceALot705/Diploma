@@ -26,7 +26,6 @@
         max-width: 1024px;
         min-width: 768px;
         width: 100%;
-        margin-bottom: 40px;
     }
 }
 
@@ -35,7 +34,6 @@
         max-width: 768px;
         min-width: 343px;
         width: 100%;
-        margin-bottom: 30px;
         min-height: 56px;
     }
 }
@@ -45,7 +43,6 @@
         max-width: 425px;
         min-width: 288px;
         width: 100%;
-        margin-bottom: 30px;
         min-height: 56px;
     }
 }

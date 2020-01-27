@@ -9,6 +9,8 @@
 @import url(/src/css/blocks/about-project/about-project.css);
 @import url(/src/css/blocks/about-technologies/about-technologies.css);
 @import url(/src/css/blocks/history/history.css);
+@import url(/src/css//blocks/analytics/statistics/statistics.css);
+@import url(/src/css/blocks//analytics-by-day/analytics-by-day.css);
 
 body {
     background-color:#ffffff;

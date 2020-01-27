@@ -1,3 +1,12 @@
 .footer__yandex-practicum {
     margin-right: 39px;
+    text-decoration: none;
+}
+
+.footer__yandex-practicum:hover {
+    cursor: pointer;
+}
+
+.footer__yandex-practicum:visited {
+    color: #1A1B22;
 }

@@ -5,6 +5,15 @@
     font-size: 18px;
     line-height: 24px;
     margin-right: 16px;
+    text-decoration: none;
+}
+
+.searching-results__analitics:visited {     
+    color: #1A1B22;
+}
+
+.searching-results__analitics:hover {
+    cursor: pointer;
 }
 
 @media screen and (max-width: 767px) and (min-width: 425px) {

@@ -29,17 +29,17 @@
         align-items: flex-start;
         justify-content: space-between;
         flex-wrap: wrap;
-        padding: 0 30px;
+        padding: 20px 16px 22px;
     }
 }
 
 @media screen and (max-width: 425px) {
     .footer {
         max-width: 425px;
-        height: 224px;
+        height: 202px;
         align-items: flex-start;
         justify-content: space-between;
         flex-wrap: wrap;
-        padding: 0 16px;
+        padding: 20px 16px 22px;
     }
 }

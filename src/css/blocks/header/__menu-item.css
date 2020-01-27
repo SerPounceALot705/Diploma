@@ -14,7 +14,6 @@
 
 .header__menu-item:hover {
     cursor: pointer;
-    border-bottom: 3px solid #ffffff;
     color: #ffffff;
     -webkit-transition: all .1s linear;
     -moz-transition: all .1s linear;
@@ -29,7 +28,6 @@
 
 .header__menu-item.header__menu-item_theme_dark:hover {
     cursor: pointer;
-    border-bottom: 3px solid #1A1B22;;
     color: #1A1B22;
     -webkit-transition: all .1s linear;
     -moz-transition: all .1s linear;

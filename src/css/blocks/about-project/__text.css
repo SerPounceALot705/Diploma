@@ -7,6 +7,15 @@
     max-width: 815px;
 }
 
+p.about-project__text {
+    margin-bottom: 18px;
+}
+
+p.about-project__text:last-child {
+    margin-bottom: 0;
+}
+
+
 @media screen and (max-width: 1024px) and (min-width: 768px) {
     .about-project__text {
         max-width: 1024px

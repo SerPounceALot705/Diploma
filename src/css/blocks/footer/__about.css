@@ -1,3 +1,13 @@
 .footer__about {
     margin-right: 39px;
+    text-decoration: none;
+}
+
+
+.footer__about:hover {
+    cursor: pointer;
+}
+
+.footer__about:visited {
+    color: #1A1B22;
 }
