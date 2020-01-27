@@ -1,0 +1,30 @@
+@import url('__menu.css');
+@import url('__menu-item.css');
+@import url('__menu-item_active.css');
+@import url('__title.css');
+@import url('statistics-item.css');
+
+.statistics {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 40px 10% 80px;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    .statistics {
+        padding: 30px 40px;
+    }
+}
+
+@media screen and (max-width: 767px) and (min-width: 425px) {
+    .statistics {
+        padding: 16px 16px 24px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .statistics {
+        padding: 16px 16px 24px;
+    }
+}
