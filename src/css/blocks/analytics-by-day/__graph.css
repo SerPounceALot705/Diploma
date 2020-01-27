@@ -1,0 +1,6 @@
+.analytics-by-day__graph {
+    border-top: 1px solid #1A1B22;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}

@@ -1,0 +1,35 @@
+@import url('__title.css');
+@import url('__container-headline.css');
+@import url('__date.css');
+@import url('__amount.css');
+@import url('__graph.css');
+@import url('__week.css');
+@import url('__week-item.css');
+@import url('__graph-container.css');
+@import url('__measure-container.css');
+@import url('__measure.css');
+@import url('__diagram.css');
+@import url('__diagram-item.css');
+
+
+.analytics-by-day {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    background: #F5F6F7;
+    padding: 40px 10% 80px;
+}
+
+
+@media screen and (max-width: 767px) and (min-width: 425px) {
+    .analytics-by-day {
+        padding: 24px 16px 38px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .analytics-by-day {
+        padding: 24px 16px 38px;   
+    }
+
+}

@@ -1,0 +1,29 @@
+.analytics-by-day__week {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    color: #1A1B22;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    list-style-type: none;
+    padding-left: 0;
+    width: 104px;
+}
+
+ul.analytics-by-day__week {
+    margin-top: 8px;
+}
+
+@media screen and (max-width: 767px) and (min-width: 425px) {
+    ul.analytics-by-day__week {
+        margin-top: 18px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    ul.analytics-by-day__week {
+        margin-top: 18px;
+    }
+}
