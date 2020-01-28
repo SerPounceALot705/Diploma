@@ -1,5 +1,11 @@
 .history__button-link {
     display: none;
+    text-decoration: none;
+    color: #1A1B22;
+}
+
+.history__button-link:visited {
+    color: #1A1B22;   
 }
 
 @media screen and (max-width: 767px) and (min-width: 425px) {
