@@ -1,35 +1,18 @@
 import '../css/index.css';
-import Glide from '@glidejs/glide'
+import { About } from '../js/about';
+import { Analytics } from '../js/analytics';
 
-class main {
+class Main {
     constructor(){
-        console.log('bye world')
+        console.log('index')
     }
 }
 
 (function abc() {
 
-    new Glide('.glide', {
-        type: 'carousel',
-        focusAt: 'center',
-        perView: 4,
-        breakpoints: {
-            1280: {
-                perView : 3
-            },
-            1024 : {
-                perView : 2
-            },
-            767: 
-            {
-                perView: 1
-            },
-            425: {
-                perView: 1
-            }
-        }
-      }).mount()
-      
-    const _main = new main();
+    new About();
+    new Main();
+    new Analytics();
+
 })();
 

@@ -10,7 +10,7 @@ module.exports = {
     entry: { main: './src/js/index.js' },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].[chunkhash].js'
+        filename: './js/[name].[chunkhash].js'
     },
     module: {
         rules: [{
@@ -25,7 +25,7 @@ module.exports = {
                     (isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
                     'css-loader', 
                     'postcss-loader'
-                ]
+                ],
             },
             {
                 test: /\.(png|jpg|gif|ico|svg)$/,
@@ -47,20 +47,20 @@ module.exports = {
         new HtmlWebpackPlugin({
             inject: false,
             template: './src/index.html',
-            filename: 'index.html'
+            filename: 'index.html',
         }),
         new HtmlWebpackPlugin({
             inject: false,
             template: './src/about.html',
-            filename: 'about.html'
+            filename: './html/about.html'
         }),
         new HtmlWebpackPlugin({
             inject: false,
             template: './src/analytics.html',
-            filename: 'analytics.html'
+            filename: './html/analytics.html'
         }),
         new MiniCssExtractPlugin({
-            filename: 'index.[contenthash].css'
+            filename: './css/index.[contenthash].css',
         }),
         new OptimizeCssAssetsPlugin({
             assetNameRegExp: /\.css$/g,
