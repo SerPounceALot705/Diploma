@@ -5,12 +5,14 @@
     font-size: 18px;
     line-height: 24px;
     color: #B6BCBF;
-
-    padding-top: 30px;
-    padding-bottom: 30px;
     text-decoration: none;
-
+    padding-bottom: 28px;
 }
+
+a.header__menu-item {
+    margin: 0;
+}
+
 
 .header__menu-item:hover {
     cursor: pointer;
@@ -36,13 +38,17 @@
     transition: all .1s linear;
 }
 
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    .header__menu-item {
+        padding-bottom: 28px;
+    }
+}
 
 @media screen and (max-width: 767px) and (min-width: 425px) {
     .header__menu-item {
         font-size: 16px;
         line-height: 24px;
-        padding-top: 15px;
-        padding-bottom: 15px;
+        padding-bottom: 17px;
     }
 }
 
@@ -50,7 +56,6 @@
     .header__menu-item {
         font-size: 16px;
         line-height: 24px;
-        padding-top: 15px;
-        padding-bottom: 15px;
+        padding-bottom: 17px;
     }
 }
