@@ -4,7 +4,7 @@
     background: #FFFFFF;
     border: 1px solid #FFFFFF;
     border-radius: 80px;
-    font-family: 'Roboto';
+    font-family: 'Roboto', 'Times New Roman', 'Arial';
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
@@ -30,6 +30,9 @@
 
 .searching-results__button:focus {
     outline: none;
+    background: rgba(202, 202, 202, 0.5);
+    border: 1px solid rgba(202, 202, 202, 0.5);
+
 }
 
 @media screen and (max-width: 1024px) and (min-width: 768px) {

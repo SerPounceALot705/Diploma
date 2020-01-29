@@ -1,11 +1,16 @@
 .footer__links {
-    font-family: 'Source Sans Pro';
+    font-family: 'Source Sans Pro', 'Times New Roman', 'Arial';
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 24px;
     text-align: center;
     color: #1A1B22;
+}
+
+ul.footer__links {
+    display: flex;
+    list-style-type: none;
 }
 
 @media screen and (max-width: 767px) and (min-width: 425px) {
