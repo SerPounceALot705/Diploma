@@ -52,12 +52,12 @@ module.exports = {
         new HtmlWebpackPlugin({
             inject: false,
             template: './src/about.html',
-            filename: './html/about.html'
+            filename: 'about.html'
         }),
         new HtmlWebpackPlugin({
             inject: false,
             template: './src/analytics.html',
-            filename: './html/analytics.html'
+            filename: 'analytics.html'
         }),
         new MiniCssExtractPlugin({
             filename: './css/index.[contenthash].css',
