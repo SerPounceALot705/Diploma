@@ -14,11 +14,12 @@
     <section class="about">
         <div class="header__container-menu header__container-menu_theme_dark">
             <div class="logo logo_theme_dark">NewsAnalizer</div>
-            <nav class="header__menu header__menu_theme_dark">
-                <a class="header__menu-item header__menu-item_theme_dark" href="<%='./index.html'%>">Главная</a>
-                <a class="header__menu-item header__menu-item_theme_dark header__menu-item_active_theme_dark">О
-                    проекте</a>
-            </nav>
+            <ul class="header__menu header__menu_theme_dark">
+                <li><a class="header__menu-item header__menu-item_theme_dark" href="<%='./index.html'%>">Главная</a>
+                </li>
+                <li><a class="header__menu-item header__menu-item_theme_dark header__menu-item_active_theme_dark">О
+                        проекте</a></li>
+            </ul>
         </div>
     </section>
     <section class="about-project">
@@ -49,26 +50,26 @@
             <div class="about-technologies__container-img">
                 <div class="technology">
                     <h3 class="technology-title">HTML</h3>
-                    <img class="technology__img" src="<%=require('./images/html.png').default%>" alt="html.png">
+                    <img class="technology__img" src="<%=require('./images/html.png').default%>" alt="html technology icon">
                 </div>
                 <div class="technology">
                     <h3 class="technology-title">CSS</h3>
-                    <img class="technology-img" src="<%=require('./images/css.png').default%>" alt="css.png">
+                    <img class="technology-img" src="<%=require('./images/css.png').default%>" alt="css technology icon">
                 </div>
                 <div class="technology">
                     <h3 class="technology-title">JavaScript</h3>
-                    <img class="technology-img" src="<%=require('./images/js.png').default%>" alt="js.png">
+                    <img class="technology-img" src="<%=require('./images/js.png').default%>" alt="js technology icon">
                 </div>
                 <div class="technology">
                     <h3 class="technology-title">Webpack</h3>
-                    <img class="technology-img" src="<%=require('./images/webpack.png').default%>" alt="webpack.png">
+                    <img class="technology-img" src="<%=require('./images/webpack.png').default%>" alt="webpack technology icon">
                 </div>
             </div>
         </div>
     </section>
     <section class="about-author">
         <div class="about-author__container">
-            <img class="author-img" src="<%=require('./images/image-03.png').default%>" alt="author-img.png">
+            <img class="author-img" src="<%=require('./images/image-03.png').default%>" alt="author foto">
             <div class="about-author__text">
                 <h2 class="about-author__title">Об авторе</h2>
                 <p class="about-author__subtitle">Меня зовут Валерия. Я окончила Восточно-Сибирский государственный
@@ -88,7 +89,8 @@
     <section class="history">
         <div class="history__container">
             <h2 class="history__title">История коммитов из GitHub</h2>
-            <a class="history__link" href="https://github.com/SerPounceALot705/Diploma" target="_blank">Открыть в GitHub ></a>
+            <a class="history__link" href="https://github.com/SerPounceALot705/Diploma" target="_blank">Открыть в GitHub
+                ></a>
         </div>
 
         <div class="glide">
@@ -110,8 +112,7 @@
                     <li class="glide__slide">
                         <date class="glide__date">14 августа, 2019</date>
                         <div class="glide__container">
-                            <img class="glide__img" src="<%=require('./images/image-04.png').default%>"
-                                alt="avatar.png">
+                            <img class="glide__img" src="<%=require('./images/image-04.png').default%>" alt="GitHub avatar">
                             <div class="description__container">
                                 <h3 class="glide__name">Мария Фёдорова</h3>
                                 <p class="glide__e-mail">mariiifed@yandex.ru</p>
@@ -123,8 +124,7 @@
                     <li class="glide__slide">
                         <date class="glide__date">14 августа, 2019</date>
                         <div class="glide__container">
-                            <img class="glide__img" src="<%=require('./images/image-08.png').default%>"
-                                alt="avatar.png">
+                            <img class="glide__img" src="<%=require('./images/image-08.png').default%>" alt="GitHub avatar">
                             <div class="description__container">
                                 <h3 class="glide__name">Инга Иванова</h3>
                                 <p class="glide__e-mail">ingaiva@yandex.ru</p>
@@ -136,8 +136,7 @@
                     <li class="glide__slide">
                         <date class="glide__date">14 августа, 2019</date>
                         <div class="glide__container">
-                            <img class="glide__img" src="<%=require('./images/image-08.png').default%>"
-                                alt="avatar.png">
+                            <img class="glide__img" src="<%=require('./images/image-08.png').default%>" alt="GitHub avatar">
                             <div class="description__container">
                                 <h3 class="glide__name">Инга Иванова</h3>
                                 <p class="glide__e-mail">ingaiva@yandex.ru</p>
@@ -149,8 +148,7 @@
                     <li class="glide__slide">
                         <date class="glide__date">14 августа, 2019</date>
                         <div class="glide__container">
-                            <img class="glide__img" src="<%=require('./images/image-08.png').default%>"
-                                alt="avatar.png">
+                            <img class="glide__img" src="<%=require('./images/image-08.png').default%>" alt="GitHub avatar">
                             <div class="description__container">
                                 <h3 class="glide__name">Инга Иванова</h3>
                                 <p class="glide__e-mail">ingaiva@yandex.ru</p>
@@ -179,23 +177,25 @@
             </div>
         </div>
 
-        <a class="history__button-link" href="https://github.com/SerPounceALot705/Diploma" target="_blank">Открыть в GitHub</a>
+        <a class="history__button-link" href="https://github.com/SerPounceALot705/Diploma" target="_blank">Открыть в
+            GitHub</a>
 
     </section>
     <footer class="footer">
         <div class="footer__author"> &copy; 2019 Supersite</div>
-        <nav class="footer__links">
-            <a class="footer__main" href="<%='./index.html'%>">Главная</a>
-            <a class="footer__about" href="<%='./about.html'%>">О проекте</a>
-            <a class="footer__yandex-practicum" href="https://praktikum.yandex.ru/" target="_blank">ЯндексПрактикум</a>
-        </nav>
+        <ul class="footer__links">
+            <li><a class="footer__main" href="<%='./index.html'%>">Главная</a></li>
+            <li><a class="footer__about" href="<%='./about.html'%>">О проекте</a></li>
+            <li><a class="footer__yandex-practicum" href="https://praktikum.yandex.ru/"
+                    target="_blank">ЯндексПрактикум</a></li>
+        </ul>
         <div class="footer__social-network">
             <a href="https://github.com/SerPounceALot705" target="_blank">
-                <img class="footer__social-icon" src="<%=require('./images/git.png').default%>" alt="gitHub-icon.png">
+                <img class="footer__social-icon" src="<%=require('./images/git.png').default%>" alt="gitHub-icon">
             </a>
             <a href="https://www.facebook.com/" target="_blank">
                 <img class="footer__social-icon footer__social-icon_last"
-                    src="<%=require('./images/facebook.png').default%>" alt="facebook-icon.png">
+                    src="<%=require('./images/facebook.png').default%>" alt="facebook-icon">
             </a>
         </div>
     </footer>

@@ -14,10 +14,12 @@
     <section class="analytics">
         <div class="header__container-menu header__container-menu_theme_dark">
             <div class="logo logo_theme_dark">NewsAnalizer</div>
-            <nav class="header__menu header__menu_theme_dark">
-                <a class="header__menu-item header__menu-item_theme_dark" href="<%='./index.html'%>">Главная</a>
-                <a class="header__menu-item header__menu-item_theme_dark" href="<%='./about.html'%>">О проекте</a>
-            </nav>
+            <ul class="header__menu header__menu_theme_dark">
+                <li><a class="header__menu-item header__menu-item_theme_dark" href="<%='./index.html'%>">Главная</a>
+                </li>
+                <li><a class="header__menu-item header__menu-item_theme_dark" href="<%='./about.html'%>">О проекте</a>
+                </li>
+            </ul>
         </div>
     </section>
     <section class="statistics">
@@ -78,18 +80,19 @@
     </section>
     <footer class="footer">
         <div class="footer__author"> &copy; 2019 Supersite</div>
-        <nav class="footer__links">
-            <a class="footer__main" href="<%='./index.html'%>">Главная</a>
-            <a class="footer__about" href="<%='./about.html'%>">О проекте</a>
-            <a class="footer__yandex-practicum" href="https://praktikum.yandex.ru/" target="_blank">ЯндексПрактикум</a>
-        </nav>
+        <ul class="footer__links">
+            <li><a class="footer__main" href="<%='./index.html'%>">Главная</a></li>
+            <li><a class="footer__about" href="<%='./about.html'%>">О проекте</a></li>
+            <li><a class="footer__yandex-practicum" href="https://praktikum.yandex.ru/"
+                    target="_blank">ЯндексПрактикум</a></li>
+        </ul>
         <div class="footer__social-network">
             <a href="https://github.com/SerPounceALot705" target="_blank">
-                <img class="footer__social-icon" src="<%=require('./images/git.png').default%>" alt="gitHub-icon.png">
+                <img class="footer__social-icon" src="<%=require('./images/git.png').default%>" alt="gitHub-icon">
             </a>
             <a href="https://www.facebook.com/" target="_blank">
                 <img class="footer__social-icon footer__social-icon_last"
-                    src="<%=require('./images/facebook.png').default%>" alt="facebook-icon.png">
+                    src="<%=require('./images/facebook.png').default%>" alt="facebook-icon">
             </a>
         </div>
     </footer>
