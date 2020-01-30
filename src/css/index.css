@@ -1,12 +1,11 @@
 @import url(../vendor/normalize.css);
 @import url(../vendor/fonts.css);
-@import url(../vendor/glide/glide.core.min.css);
-@import url(../vendor/glide/glide.theme.min.css);
 @import url(./blocks/page.css);
 @import url(./blocks/page.css);
 @import url(./blocks/header/header.css);
 @import url(./blocks/search-box/search-box.css);
 @import url(./blocks/searching-results/searching-results.css);
+@import url(./blocks/about-author/about-author.css);
 @import url(./blocks/footer/footer.css);
 
 body {
