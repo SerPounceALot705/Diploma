@@ -43,7 +43,7 @@ module.exports = {
             },
             {
                 test: /\.(eot|ttf|woff|woff2)$/,
-                loader: 'file-loader?name=./css/vendor/[name].[ext]'
+                loader: 'file-loader?name=./vendor/[name].[ext]'
             }
         ]
     },
@@ -72,8 +72,8 @@ module.exports = {
             canPrint: true
         }),
         new MiniCssExtractPlugin({
-            filename: './css/[name].[contenthash].css',
-            chunkFilename: './css/[id].[contenthash].css',
+            filename: './[name].[contenthash].css',
+            chunkFilename: './[id].[contenthash].css',
         }),
         new webpack.DefinePlugin({
             'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
