@@ -21,6 +21,8 @@
 }
 
 
+
+
 @media screen and (max-width: 767px) and (min-width: 425px) {
     .analytics-by-day {
         padding: 24px 16px 38px;
@@ -31,5 +33,4 @@
     .analytics-by-day {
         padding: 24px 16px 38px;   
     }
-
 }

@@ -1,3 +1,22 @@
 li.analytics-by-day__week-item {
     vertical-align: top;
 }
+
+
+@media screen and (max-width: 767px) and (min-width: 425px) {
+    .analytics-by-day {
+        padding: 24px 16px 38px;
+    }
+
+    li.analytics-by-day__week-item {
+        margin-right: 11px;
+    }
+}
+
+
+@media screen and (max-width: 425px) {
+
+    li.analytics-by-day__week-item {
+        margin-right: 11px;
+    }
+}
