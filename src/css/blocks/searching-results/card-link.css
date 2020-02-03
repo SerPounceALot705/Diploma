@@ -1,5 +1,5 @@
 .card-link {
-    font-family: 'Roboto Slab';
+    font-family: 'Roboto Slab', 'Arial', 'Helvetica';
     font-style: normal;
     font-weight: bold;
     font-size: 16px;
@@ -13,11 +13,11 @@
 }
 
 .card-link:hover {
-        cursor: pointer;
-        color: #9fa4a7;
-        -webkit-transition: all .1s linear;
-        -moz-transition: all .1s linear;
-        -ms-transition: all .1s linear;
-        -o-transition: all .1s linear;
-        transition: all .1s linear;
-    }
+    cursor: pointer;
+    color: #9fa4a7;
+    -webkit-transition: all .1s linear;
+    -moz-transition: all .1s linear;
+    -ms-transition: all .1s linear;
+    -o-transition: all .1s linear;
+    transition: all .1s linear;   
+}
