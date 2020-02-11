@@ -1,0 +1,27 @@
+.history__link {
+    font-family: 'Roboto', 'Arial', 'Helvetica';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    text-decoration: none;
+    color: #1A1B22;
+}
+
+.history__link:hover {
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 767px) and (min-width: 425px) {
+    .history__link {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 425px) {
+    .history__link {
+        display: none;
+    }
+}

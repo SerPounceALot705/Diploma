@@ -1,0 +1,32 @@
+.analytics-by-day__diagram {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 0;
+    height: 560px;
+    width: 100%;
+}
+
+ul.analytics-by-day__diagram {
+    margin-top: 8px;
+}
+
+@media screen and (max-width: 767px) and (min-width: 425px) {
+    .analytics-by-day__diagram {
+        height: 328px;
+    }
+
+    ul.analytics-by-day__diagram {
+        margin-top: 18px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .analytics-by-day__diagram {
+        height: 328px;
+    }
+
+    ul.analytics-by-day__diagram {
+        margin-top: 18px;
+    }
+}

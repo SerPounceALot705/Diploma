@@ -1,0 +1,25 @@
+.searching-results__container-analitics {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 80px auto 64px;
+    max-width: 1264px;
+}
+
+@media screen and (max-width: 767px) and (min-width: 425px) {
+    .searching-results__container-analitics {
+        flex-direction: column;
+        justify-content: flex-start;
+        max-width: 288px;
+        margin: 32px auto 40px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .searching-results__container-analitics {
+        flex-direction: column;
+        justify-content: flex-start;
+        max-width: 288px;
+        margin: 32px auto 40px;
+    }
+}

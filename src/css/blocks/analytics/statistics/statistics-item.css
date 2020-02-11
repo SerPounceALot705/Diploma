@@ -1,0 +1,12 @@
+.statistics-item {
+    font-family: 'Roboto', 'Arial', 'Helvetica';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: #1A1B22;
+}
+
+.statistics-item span {
+    font-weight: bold;
+}

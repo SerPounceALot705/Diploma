@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.analytics.css %>">
+    <title>NewsAnalizer</title>
+    <link rel="icon" href="<%=require('./images/Group.png').default%>">
+</head>
+
+<body class="page">
+    <section class="analytics">
+        <div class="header__container-menu header__container-menu_theme_dark">
+            <div class="logo logo_theme_dark">NewsAnalizer</div>
+            <ul class="header__menu header__menu_theme_dark">
+                <li><a class="header__menu-item header__menu-item_theme_dark" href="<%='./index.html'%>">Главная</a>
+                </li>
+                <li><a class="header__menu-item header__menu-item_theme_dark" href="<%='./about.html'%>">О проекте</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="statistics">
+        <nav class="statistics__menu">
+            <a class="statistics__menu-item" href="<%='./index.html'%>">Главная</a>
+            <a class="statistics__menu-item statistics__menu-item_active">/ Аналитика</a>
+        </nav>
+        <h2 class="statistics__title">Вы спросили: «Путешествия»</h2>
+        <div class="statistics__container">
+            <p class="statistics-item">Новостей за неделю: <span>34 324</span></p>
+            <p class="statistics-item">Упоминаний в загаловках: <span>235</span></p>
+        </div>
+    </section>
+    <section class="analytics-by-day">
+        <h2 class="analytics-by-day__title">Аналитика по дням</h2>
+        <div class="analytics-by-day__container">
+            <div class="analytics-by-day__container-headline">
+                <div class="analytics-by-day__date">Дата (август)</div>
+                <div class="analytics-by-day__amount">Кол-во упоминаний</div>
+            </div>
+            <div class="analytics-by-day__graph">
+                <div class="analytics-by-day__measure-container">
+                    <div class="analytics-by-day__measure">0</div>
+                    <div class="analytics-by-day__measure">25</div>
+                    <div class="analytics-by-day__measure">50</div>
+                    <div class="analytics-by-day__measure">75</div>
+                    <div class="analytics-by-day__measure">100</div>
+                </div>
+                <div class="analytics-by-day__graph-container">
+                    <ul class="analytics-by-day__week">
+                        <li class="analytics-by-day__week-item">19, пн</li>
+                        <li class="analytics-by-day__week-item">19, вт</li>
+                        <li class="analytics-by-day__week-item">19, ср</li>
+                        <li class="analytics-by-day__week-item">19, чт</li>
+                        <li class="analytics-by-day__week-item">19, пт</li>
+                        <li class="analytics-by-day__week-item">19, сб</li>
+                        <li class="analytics-by-day__week-item">19, вс</li>
+                    </ul>
+                    <ul class="analytics-by-day__diagram">
+                        <li class="analytics-by-day__diagram-item">15</li>
+                        <li class="analytics-by-day__diagram-item">18</li>
+                        <li class="analytics-by-day__diagram-item">11</li>
+                        <li class="analytics-by-day__diagram-item">39</li>
+                        <li class="analytics-by-day__diagram-item">45</li>
+                        <li class="analytics-by-day__diagram-item">73</li>
+                        <li class="analytics-by-day__diagram-item">34</li>
+                    </ul>
+                </div>
+                <div class="analytics-by-day__measure-container">
+                    <div class="analytics-by-day__measure">0</div>
+                    <div class="analytics-by-day__measure">25</div>
+                    <div class="analytics-by-day__measure">50</div>
+                    <div class="analytics-by-day__measure">75</div>
+                    <div class="analytics-by-day__measure">100</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer__author"> &copy; 2019 Supersite</div>
+        <ul class="footer__links">
+            <li><a class="footer__main" href="<%='./index.html'%>">Главная</a></li>
+            <li><a class="footer__about" href="<%='./about.html'%>">О проекте</a></li>
+            <li><a class="footer__yandex-practicum" href="https://praktikum.yandex.ru/"
+                    target="_blank">ЯндексПрактикум</a></li>
+        </ul>
+        <div class="footer__social-network">
+            <a href="https://github.com/SerPounceALot705" target="_blank">
+                <img class="footer__social-icon" src="<%=require('./images/git.png').default%>" alt="иконка GitHub">
+            </a>
+            <a href="https://www.facebook.com/" target="_blank">
+                <img class="footer__social-icon footer__social-icon_last" src="<%=require('./images/facebook.png').default%>" alt="иконка facebook">
+            </a>
+        </div>
+    </footer>
+    <script type="module" src="<%= htmlWebpackPlugin.files.chunks.analytics.entry %>"></script>
+</body>
+
+</html>

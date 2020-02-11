@@ -1,0 +1,9 @@
+.card-info {
+    margin: 20px 24px 18px;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    .card-info {
+        margin: 16px 16px 12px;
+    }
+}

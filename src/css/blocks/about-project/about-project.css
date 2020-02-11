@@ -1,0 +1,30 @@
+@import url('__title.css');
+@import url('__text.css');
+@import url('__container.css');
+
+.about-project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 10% 94px;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    .about-project {
+        padding: 29px 40px 26px 40px;
+    }
+}
+
+@media screen and (max-width: 767px) and (min-width: 425px) {
+    .about-project {
+        max-width: 767px;
+        padding: 16px 16px 30px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .about-project {
+        max-width: 425px;
+        padding: 16px 16px 30px;
+    }
+}

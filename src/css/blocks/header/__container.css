@@ -1,0 +1,28 @@
+.header__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #FFFFFF;
+    z-index: 1;
+    flex-direction: column;
+    max-width: 608px;
+}
+
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    .header__container {
+        max-width: 1024px;
+    }
+}
+
+@media screen and (max-width: 767px) and (min-width: 425px) {
+    .header__container {
+        max-width: 767px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .header__container {
+        max-width: 425px;
+    }
+}

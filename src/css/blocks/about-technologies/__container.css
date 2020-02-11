@@ -1,0 +1,32 @@
+.about-technologies__container{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 80px 10%;
+    background: #F5F6F7;
+}
+
+@media screen and (max-width: 1280px) {
+    .about-technologies__container {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    .about-technologies__container  {
+        flex-direction: column;
+        padding: 40px 40px;
+    }
+}
+
+@media screen and (max-width: 767px) and (min-width: 425px) {
+    .about-technologies__container  {
+        padding: 40px 16px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .about-technologies__container  {
+        padding: 40px 16px;
+    }
+}

@@ -1,0 +1,30 @@
+.about-author__title {
+    font-family: 'Roboto Slab', 'Arial', 'Helvetica';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 46px;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    .about-author__title {
+        font-size: 30px;
+        line-height: 40px;
+    }
+}
+
+@media screen and (max-width: 767px) and (min-width: 425px) {
+    .about-author__title {
+        font-size: 30px;
+        line-height: 40px;
+        margin-top: 24px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .about-author__title {
+        font-size: 30px;
+        line-height: 40px;
+        margin-top: 24px;
+    }
+}

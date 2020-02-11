@@ -1,0 +1,40 @@
+.about-project__title {
+    font-family: 'Roboto Slab', 'Arial', 'Helvetica';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 46px;
+    color: #1A1B22;
+    margin-bottom: 24px;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    .about-project__title {
+        max-width: 768px;
+        width: 100%;
+        font-size: 30px;
+        line-height: 34px;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 767px) and (min-width: 425px) {
+    .about-project__title {
+        max-width: 767px;
+        width: 100%;
+        margin-left: 0;
+        font-size: 30px;
+        line-height: 40px;
+
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .about-project__title {
+        max-width: 425px;
+        width: 100%;
+        margin-left: 0;
+        font-size: 30px;
+        line-height: 40px;
+    }
+}

@@ -1,0 +1,14 @@
+.technology-title {
+    font-family: 'Roboto', 'Arial', 'Helvetica';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.2px;
+    color: #1A1B22;
+}
+
+h3.technology-title  {
+    margin: 0;
+}

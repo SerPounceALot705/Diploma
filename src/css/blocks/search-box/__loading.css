@@ -1,0 +1,19 @@
+@keyframes move {
+    from {
+        transform: rotate(-15deg);
+    }
+
+    to {
+        transform: rotate(345deg);
+    }
+}
+
+.search-box__loading {
+    width: 74px;
+    height: 74px;
+    object-fit: none;
+    margin-bottom: 24px;
+    transform: rotate(-15deg);
+    animation: move 1s infinite linear;
+}
+

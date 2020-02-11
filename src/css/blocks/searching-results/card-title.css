@@ -1,0 +1,38 @@
+.card-title {
+    font-family: 'Roboto Slab', 'Arial', 'Helvetica';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 30px;
+    color: #1A1B22;
+    margin-bottom: 16px;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    .card-title {
+        font-size: 22px;
+        line-height: 24px;
+        
+
+    }
+}
+
+@media screen and (max-width: 767px) and (min-width: 425px) {
+    .card-title {
+        font-size: 22px;
+        line-height: 26px;
+        max-width: 256px;
+        max-height: 52px;
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .card-title {
+        font-size: 22px;
+        line-height: 26px;
+        max-width: 256px;
+        max-height: 52px;
+        overflow: hidden;
+    }
+}

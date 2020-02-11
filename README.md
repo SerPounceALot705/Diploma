@@ -26,4 +26,3 @@
 2. Сборка проекта npm rum build
 3. Запуск проекта в режиме отладки  nmp run dev
 4. Публикация проекта в ветке gh-pages npm run deploy
-

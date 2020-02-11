@@ -1,0 +1,39 @@
+.glide__arrow {
+    background: #1A1B22;
+    box-shadow: 0px 3px 10px rgba(14, 26, 57, 0.2);
+    border-radius: 50%;
+    border: 1px solid #1A1B22;
+
+}
+
+.glide__arrow--prev {
+    top: 50%;
+    left: 24px;
+}
+
+.glide__arrow--next {
+    right: 50%;
+    right: 24px;
+}
+
+
+@media screen and (max-width: 767px) and (min-width: 425px) {
+    .glide__arrow--prev {
+        display: none;
+    }
+
+    .glide__arrow--next {
+       display: none;
+    }
+
+}
+
+@media screen and (max-width: 425px) {
+    .glide__arrow--prev {
+        display: none;
+    }
+
+    .glide__arrow--next {
+       display: none;
+    }
+}

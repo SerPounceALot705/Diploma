@@ -1,0 +1,23 @@
+.card-link {
+    font-family: 'Roboto Slab', 'Arial', 'Helvetica';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    color: #B6BCBF;
+    position: absolute;
+    top: 93%;
+    text-decoration: none;
+}
+
+.card-link:hover {
+    cursor: pointer;
+    color: #9fa4a7;
+    -webkit-transition: all .1s linear;
+    -moz-transition: all .1s linear;
+    -ms-transition: all .1s linear;
+    -o-transition: all .1s linear;
+    transition: all .1s linear;   
+}

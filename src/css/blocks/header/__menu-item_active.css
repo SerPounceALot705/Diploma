@@ -1,0 +1,12 @@
+.header__menu-item_active { 
+    border-bottom: 3px solid #ffffff;
+}
+
+.header__menu-item.header__menu-item_theme_dark.header__menu-item_active_theme_dark {
+    color: #1A1B22;
+    border-bottom: 3px solid #1A1B22;
+}
+
+.header__menu-item.header__menu-item_active {
+    color: #ffffff;
+}

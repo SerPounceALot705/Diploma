@@ -1,0 +1,21 @@
+@import url('__container-analitics.css');
+@import url('__container.css');
+@import url('card.css');
+@import url('__title.css');
+@import url('__analytics.css');
+@import url('card-image.css');
+@import url('card-info.css');
+@import url('data.css');
+@import url('card-title.css');
+@import url('card-text.css');
+@import url('card-link.css');
+@import url('__button.css');
+
+.searching-results {
+    max-width: 1232px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #F5F6F7;
+    margin: 0 auto;
+}

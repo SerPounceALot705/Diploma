@@ -1,0 +1,5 @@
+.analytics-by-day__container-headline {
+    display: flex;
+    justify-content: space-between;
+    max-width: 250px;
+}
