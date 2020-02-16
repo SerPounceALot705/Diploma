@@ -16,10 +16,10 @@ export default class NewsCard {
                 <p class="card-text">}</p>
                 <a href="" class="card-link" target="_blank"></a>
             </div>`;
-            
+
         newsCard.insertAdjacentHTML('beforeend', template.trim());
 
-        let publicationDate = new Date(data.publicationDate)
+        let publicationDate = new Date(data.publishedAt)
             .toLocaleDateString('ru-RU', 
             {
                 year: 'numeric', 
