@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -27,10 +27,10 @@
             <a class="statistics__menu-item" href="<%='./index.html'%>">Главная</a>
             <a class="statistics__menu-item statistics__menu-item_active">/ Аналитика</a>
         </nav>
-        <h2 class="statistics__title">Вы спросили: «Путешествия»</h2>
+        <h2 class="statistics__title"></h2>
         <div class="statistics__container">
-            <p class="statistics-item">Новостей за неделю: <span>34 324</span></p>
-            <p class="statistics-item">Упоминаний в загаловках: <span>235</span></p>
+            <p class="statistics-item">Новостей за неделю: <span id="total-results"></span></p>
+            <p class="statistics-item">Упоминаний в загаловках: <span id="total-mention"></span></p>
         </div>
     </section>
     <section class="analytics-by-day">
@@ -50,22 +50,22 @@
                 </div>
                 <div class="analytics-by-day__graph-container">
                     <ul class="analytics-by-day__week">
-                        <li class="analytics-by-day__week-item">19, пн</li>
-                        <li class="analytics-by-day__week-item">19, вт</li>
-                        <li class="analytics-by-day__week-item">19, ср</li>
-                        <li class="analytics-by-day__week-item">19, чт</li>
-                        <li class="analytics-by-day__week-item">19, пт</li>
-                        <li class="analytics-by-day__week-item">19, сб</li>
-                        <li class="analytics-by-day__week-item">19, вс</li>
+                        <li class="analytics-by-day__week-item" id="monday-day"></li>
+                        <li class="analytics-by-day__week-item" id="tuesday-day"></li>
+                        <li class="analytics-by-day__week-item" id="wednesday-day"></li>
+                        <li class="analytics-by-day__week-item" id="thursday-day"></li>
+                        <li class="analytics-by-day__week-item" id="friday-day"></li>
+                        <li class="analytics-by-day__week-item" id="saturday-day"></li>
+                        <li class="analytics-by-day__week-item" id="sunday-day"></li>
                     </ul>
                     <ul class="analytics-by-day__diagram">
-                        <li class="analytics-by-day__diagram-item">15</li>
-                        <li class="analytics-by-day__diagram-item">18</li>
-                        <li class="analytics-by-day__diagram-item">11</li>
-                        <li class="analytics-by-day__diagram-item">39</li>
-                        <li class="analytics-by-day__diagram-item">45</li>
-                        <li class="analytics-by-day__diagram-item">73</li>
-                        <li class="analytics-by-day__diagram-item">34</li>
+                        <li class="analytics-by-day__diagram-item" id="monday"></li>
+                        <li class="analytics-by-day__diagram-item" id="tuesday"></li>
+                        <li class="analytics-by-day__diagram-item" id="wednesday"></li>
+                        <li class="analytics-by-day__diagram-item" id="thursday"></li>
+                        <li class="analytics-by-day__diagram-item" id="friday"></li>
+                        <li class="analytics-by-day__diagram-item" id="saturday"></li>
+                        <li class="analytics-by-day__diagram-item" id="sunday"></li>
                     </ul>
                 </div>
                 <div class="analytics-by-day__measure-container">

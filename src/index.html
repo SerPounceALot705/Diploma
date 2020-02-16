@@ -13,10 +13,14 @@
 <body class="page">
     <section class="header">
         <picture>
-            <source media="(max-width: 1024px)" srcset="<%=require('./images/georgia-de-lotz--UsJoNxLaNo-unsplash-768px.png').default%>">
-            <source media="(max-width: 767px)" srcset="<%=require('./images/georgia-de-lotz--UsJoNxLaNo-unsplash-768px.png').default%>">  
-            <source media="(max-width: 425px)" srcset="<%=require('./images/georgia-de-lotz--UsJoNxLaNo-unsplash-320px.png').default%>">
-            <img src="<%=require('./images/georgia-de-lotz--UsJoNxLaNo-unsplash.png').default%>" class="header__background" alt="фон шапки сайта поиска новостей">    
+            <source media="(max-width: 1024px)"
+                srcset="<%=require('./images/georgia-de-lotz--UsJoNxLaNo-unsplash-768px.png').default%>">
+            <source media="(max-width: 767px)"
+                srcset="<%=require('./images/georgia-de-lotz--UsJoNxLaNo-unsplash-768px.png').default%>">
+            <source media="(max-width: 425px)"
+                srcset="<%=require('./images/georgia-de-lotz--UsJoNxLaNo-unsplash-320px.png').default%>">
+            <img src="<%=require('./images/georgia-de-lotz--UsJoNxLaNo-unsplash.png').default%>"
+                class="header__background" alt="фон шапки сайта поиска новостей">
         </picture>
         <div class="header__container-menu">
             <div class="logo">NewsAnalizer</div>
@@ -29,98 +33,14 @@
             <h1 class="header__title">Что в мире творится?</h1>
             <h2 class="header__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях
                 за прошедшую неделю.</h2>
-            <form class="header__container-search-string">
-                <input class="header__input" placeholder="Введите тему новости" type="text" minlength="2" required>
-                <button class="header__button" type="submit">Искать</button>
-            </form>    
+            <form class="header__container-search-string" name="search">
+                <input class="header__input" placeholder="Введите тему новости" type="text" minlength="2" maxlength="30" name="text"
+                    required>
+                <button class="header__button" type="submit" name="submit">Искать</button>
+            </form>
         </div>
     </section>
-    <section class="search-box">
-        <img class="search-box__loading" src="<%=require('./images/Ellipse.png').default%>" alt="прелоудер сайта">
-        <h2 class="search-box__message">Идет поиск новостей...</h2>
-    </section>
-    <section class="search-box">
-        <img class="search-box__result" src="<%=require('./images/not-found_v1.png').default%>" alt="результаты поиска по запросу">
-        <p class="search-box__report">Ничего не найдено</p>
-        <h2 class="search-box__message">К сожалению по вашему запросу ничего не найдено.</h2>
-    </section>
-    <section class="search-box">
-        <div class="searching-results">
-            <div class="searching-results__container-analitics">
-                <h2 class="searching-results__title">Результаты поиска</h2>
-                <a class="searching-results__analitics" href="<%='./analytics.html'%>">Посмотреть аналитику ></a>
-            </div>
-            <div class="searching-results__container">
-                <div class=card>
-                    <img class=card-image src="<%=require('./images/image_08.png').default%>" alt="фото новости">
-                    <div class="card-info">
-                        <div class="data">2 августа, 2019</div>
-                        <h2 class="card-title">Национальное достояние – парки</h2>
-                        <p class="card-text">В 2016 году Америка отмечала важный юбилей:
-                            сто лет назад здесь начала складываться система национальных парков – охраняемых территорий,
-                            где и сегодня каждый может приобщиться к природе.</p>
-                        <a class="card-link">Лента.ру</a>
-                    </div>
-                </div>
-                <div class=card>
-                    <img class=card-image src="<%=require('./images/image_04.png').default%>" alt="фото новости">
-                    <div class="card-info">
-                        <div class="data">2 августа, 2019</div>
-                        <h2 class="card-title">Лесные огоньки: история одной фотографии</h2>
-                        <p class="card-text">Фотограф отвлеклась от освещения суровой политической реальности Мексики,
-                            чтобы запечатлеть ускользающую красоту одного
-                            из местных чудес природы.</p>
-                        <a class="card-link">Медуза</a>
-                    </div>
-                </div>
-                <div class=card>
-                    <img class=card-image src="<%=require('./images/image_07.png').default%>" alt="фото новости">
-                    <div class="card-info">
-                        <div class="data">2 августа, 2019</div>
-                        <h2 class="card-title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h2>
-                        <p class="card-text">Знаменитый фотограф снимает первозданные леса России,
-                            чтобы рассказать о необходимости их сохранения.
-                            В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
-                        <a class="card-link">Риа</a>
-                    </div>
-                </div>
-                <div class=card>
-                    <img class=card-image src="<%=require('./images/image_06.png').default%>" alt="фото новости">
-                    <div class="card-info">
-                        <div class="data">2 августа, 2019</div>
-                        <h2 class="card-title">Национальное достояние – парки</h2>
-                        <p class="card-text">В 2016 году Америка отмечала важный юбилей:
-                            сто лет назад здесь начала складываться система национальных парков – охраняемых территорий,
-                            где и сегодня каждый может приобщиться к природе.</p>
-                        <a class="card-link">Дзен</a>
-                    </div>
-                </div>
-                <div class=card>
-                    <img class=card-image src="<%=require('./images/image_01.png').default%>" alt="фото новости">
-                    <div class="card-info">
-                        <div class="data">2 августа, 2019</div>
-                        <h2 class="card-title">Лесные огоньки: история одной фотографии</h2>
-                        <p class="card-text">Фотограф отвлеклась от освещения суровой политической реальности Мексики,
-                            чтобы запечатлеть ускользающую красоту одного
-                            из местных чудес природы.</p>
-                        <a class="card-link">Афиша</a>
-                    </div>
-                </div>
-                <div class=card>
-                    <img class=card-image src="<%=require('./images/image_05.png').default%>" alt="фото новости">
-                    <div class="card-info">
-                        <div class="data">2 августа, 2019</div>
-                        <h2 class="card-title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h2>
-                        <p class="card-text">Знаменитый фотограф снимает первозданные леса России,
-                            чтобы рассказать о необходимости их сохранения.
-                            В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
-                        <a class="card-link">Медиазона</a>
-                    </div>
-                </div>
-            </div>
-            <button class="searching-results__button">Показать еще</button>
-        </div>
-    </section>
+    <section class="search-box"></section>
     <section class="about-author">
         <div class="about-author__container">
             <img class="author-img" src="<%=require('./images/image-03.png').default%>" alt="фото автора проекта">
@@ -145,14 +65,16 @@
         <ul class="footer__links">
             <li><a class="footer__main" href="<%='./index.html'%>">Главная</a></li>
             <li><a class="footer__about" href="<%='./about.html'%>">О проекте</a></li>
-            <li><a class="footer__yandex-practicum" href="https://praktikum.yandex.ru/" target="_blank">ЯндексПрактикум</a></li>
+            <li><a class="footer__yandex-practicum" href="https://praktikum.yandex.ru/"
+                    target="_blank">ЯндексПрактикум</a></li>
         </ul>
         <div class="footer__social-network">
             <a href="https://github.com/SerPounceALot705" target="_blank">
                 <img class="footer__social-icon" src="<%=require('./images/git.png').default%>" alt="иконка GitHub">
             </a>
             <a href="https://www.facebook.com/" target="_blank">
-                <img class="footer__social-icon footer__social-icon_last" src="<%=require('./images/facebook.png').default%>" alt="иконка facebook">
+                <img class="footer__social-icon footer__social-icon_last"
+                    src="<%=require('./images/facebook.png').default%>" alt="иконка facebook">
             </a>
         </div>
     </footer>
