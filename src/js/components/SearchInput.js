@@ -30,8 +30,6 @@ export default class SearchInput {
 
             api.getNews()
                 .then(result => {
-
-                    console.log(result);
                     this.utils.removeChild(this.searchBox);
                     this.storage.deleteData('cardsArray');
                     this.storage.deleteData('requestText');
@@ -52,12 +50,10 @@ export default class SearchInput {
                     this.draw.toggleDisabledElement(event.target.elements.text);
                     this.draw.toggleDisabledElement(event.target.elements.submit);
                 })
-                .catch(error => {
+                .catch( () => {
                     this.draw.applyBadResult(`Во время запроса произошла ошибка. Подождите немного и попробуйте ещё раз`);
                     this.draw.toggleDisabledElement(event.target.elements.text);
                     this.draw.toggleDisabledElement(event.target.elements.submit);
-                    
-                    console.log(`Запрос завершился с ошибкой ${error.status} : ${error}`, error);
                 });
 
         }

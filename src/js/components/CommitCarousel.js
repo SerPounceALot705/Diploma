@@ -10,8 +10,6 @@ export default class CommitsCarousel {
         gitHubApi.getCommits()
             .then(result => {
                 this.commits = result;
-                console.log(this.commits);
-
                 this._applyCommitsCard();
                 const glideInit = new GlideInit();
 

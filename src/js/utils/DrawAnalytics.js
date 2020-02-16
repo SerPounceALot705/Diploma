@@ -20,13 +20,11 @@ export default class DrawAnalytics {
                 const date = new Date(week[day].date);
                 const weekday = date.toLocaleString("ru", { weekday: 'short' }).toUpperCase()
 
-                container.textContent = `${date.getDate()}, ${weekday}`;
+                containerDay.textContent = `${date.getDate()}, ${weekday}`;
             } else {
                 container.remove();
-                containerDay.remove();
-                
+                containerDay.remove();   
             }
-
         });
     }
 }

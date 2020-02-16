@@ -3,7 +3,6 @@ import LocalStorage from '../modules/LocalStorageApi';
 export default class AgrigateAnalytics {
     constructor() {
         this.localStorage = new LocalStorage();
-        console.log(this.localStorage.getData('cardsArray'));
     }
 
     getTotalResults() {
@@ -23,89 +22,89 @@ export default class AgrigateAnalytics {
                 switch (day.getDay()) {
                     case 0:
 
-                        if (this.isUndefined(agrigateData.monday)) {
+                        if (this._isUndefined(agrigateData.monday)) {
                             agrigateData.monday = { title: 0, description: 0 }
                         }
 
-                        agrigateData.monday = this.agrigateDay(agrigateData.monday, item, requestText);
+                        agrigateData.monday = this._agrigateDay(agrigateData.monday, item, requestText);
                         agrigateData.monday.date = item.publishedAt;
 
                         break;
 
                     case 1:
-                        if (this.isUndefined(agrigateData.tuesday)) {
+                        if (this._isUndefined(agrigateData.tuesday)) {
                             agrigateData.tuesday = { title: 0, description: 0 }
                         }
 
-                        agrigateData.tuesday = this.agrigateDay(agrigateData.tuesday, item, requestText);
+                        agrigateData.tuesday = this._agrigateDay(agrigateData.tuesday, item, requestText);
                         agrigateData.tuesday.date = item.publishedAt;
                         break;
 
                     case 2:
-                        if (this.isUndefined(agrigateData.wednesday)) {
+                        if (this._isUndefined(agrigateData.wednesday)) {
                             agrigateData.wednesday = { title: 0, description: 0 }
                         }
 
-                        agrigateData.wednesday = this.agrigateDay(agrigateData.wednesday, item, requestText);
+                        agrigateData.wednesday = this._agrigateDay(agrigateData.wednesday, item, requestText);
                         agrigateData.wednesday.date = item.publishedAt;
                         break;
 
                     case 3:
-                        if (this.isUndefined(agrigateData.thursday)) {
+                        if (this._isUndefined(agrigateData.thursday)) {
                             agrigateData.thursday = { title: 0, description: 0 }
                         }
 
-                        agrigateData.thursday = this.agrigateDay(agrigateData.thursday, item, requestText);
+                        agrigateData.thursday = this._agrigateDay(agrigateData.thursday, item, requestText);
                         agrigateData.thursday.date = item.publishedAt;
                         break;
 
                     case 4:
-                        if (this.isUndefined(agrigateData.friday)) {
+                        if (this._isUndefined(agrigateData.friday)) {
                             agrigateData.friday = { title: 0, description: 0 }
                         }
 
-                        agrigateData.friday = this.agrigateDay(agrigateData.friday, item, requestText);
+                        agrigateData.friday = this._agrigateDay(agrigateData.friday, item, requestText);
                         agrigateData.friday.date = item.publishedAt;
                         break;
 
                     case 5:
-                        if (this.isUndefined(agrigateData.saturday)) {
+                        if (this._isUndefined(agrigateData.saturday)) {
                             agrigateData.saturday = { title: 0, description: 0 }
                         }
 
-                        agrigateData.saturday = this.agrigateDay(agrigateData.saturday, item, requestText);
+                        agrigateData.saturday = this._agrigateDay(agrigateData.saturday, item, requestText);
                         agrigateData.saturday.date = item.publishedAt;
                         break;
 
                     case 6:
-                        if (this.isUndefined(agrigateData.sunday)) {
+                        if (this._isUndefined(agrigateData.sunday)) {
                             agrigateData.sunday = { title: 0, description: 0 }
                         }
 
-                        agrigateData.sunday = this.agrigateDay(agrigateData.sunday, item, requestText);
+                        agrigateData.sunday = this._agrigateDay(agrigateData.sunday, item, requestText);
                         agrigateData.sunday.date = item.publishedAt;
                         break;
                 }
             });
         }
 
-        agrigateData.totalTitle = this.getTotal(agrigateData, 'title');
-        agrigateData.totalDescription = this.getTotal(agrigateData, 'description');
+        agrigateData.totalTitle = this._getTotal(agrigateData, 'title');
+        agrigateData.totalDescription = this._getTotal(agrigateData, 'description');
         agrigateData.total = agrigateData.totalTitle + agrigateData.totalDescription;
 
-        this.calculationPercent(agrigateData);
+        this._calculationPercent(agrigateData);
         
         return agrigateData;
     }
 
-    isUndefined(obj) {
+    _isUndefined(obj) {
         return obj === undefined;
     }
 
-    agrigateDay(day, dayData, text) {
+    _agrigateDay(day, dayData, text) {
 
-        const title = day.title + this.textRequestCount(text, dayData.title);
-        const description = day.description + this.textRequestCount(text, dayData.description);
+        const title = day.title + this._textRequestCount(text, dayData.title);
+        const description = day.description + this._textRequestCount(text, dayData.description);
         const total = title + description;
 
         return {
@@ -115,7 +114,7 @@ export default class AgrigateAnalytics {
         }
     }
 
-    textRequestCount(subString, text) {
+    _textRequestCount(subString, text) {
         
         let count = 0;
 
@@ -127,7 +126,7 @@ export default class AgrigateAnalytics {
         return count;
     }
 
-    getTotal(week, type) {
+    _getTotal(week, type) {
 
         let count = 0;
         const badkey = ['totalTitle', 'totalDescription', 'total']
@@ -142,7 +141,7 @@ export default class AgrigateAnalytics {
         return count;
     }
 
-    calculationPercent(week) {
+    _calculationPercent(week) {
         
         const badkey = ['totalTitle', 'totalDescription', 'total']
 

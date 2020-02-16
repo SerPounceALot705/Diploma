@@ -38,7 +38,6 @@ export default class CommitsCard {
         commitCard.querySelector('.glide__text').textContent = commit.commit.message;
 
         return commitCard;
-
     }
 }
 

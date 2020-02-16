@@ -54,7 +54,7 @@ export default class DrawContainers {
             this.container.insertAdjacentHTML('beforeend', buttonTemplate.trim());
 
             this.container.querySelector(".searching-results__button").addEventListener('click', (event) => {
-                this.pagination();
+                this._pagination();
                 this.applyNewsCards();
                 event.target.blur();
 
@@ -90,16 +90,16 @@ export default class DrawContainers {
         cardNewsList.render(data.articles.slice(pagination.skip, pagination.skip + 3));
     }
 
-    pagination() {
+    toggleDisabledElement(element) {
+        element.disabled = !element.disabled;
+    }
+
+    _pagination() {
         const pagination = this.storage.getData('pagination');
 
         pagination.page += 1;
         pagination.skip = (pagination.page - 1) * pagination.take;
 
         this.storage.setData('pagination', pagination);  
-    }
-
-    toggleDisabledElement(element) {
-        element.disabled = !element.disabled;
     }
 }

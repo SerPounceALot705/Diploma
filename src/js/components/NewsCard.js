@@ -16,11 +16,10 @@ export default class NewsCard {
                 <p class="card-text">}</p>
                 <a href="" class="card-link" target="_blank"></a>
             </div>`;
-
-        
+            
         newsCard.insertAdjacentHTML('beforeend', template.trim());
 
-        let publishedAt = new Date(data.publishedAt)
+        let publicationDate = new Date(data.publicationDate)
             .toLocaleDateString('ru-RU', 
             {
                 year: 'numeric', 
@@ -28,8 +27,8 @@ export default class NewsCard {
                 day: 'numeric'
             });
             
-        publishedAt = utils.sliceString(publishedAt);
-        publishedAt = utils.insertSubString(publishedAt.length-5, publishedAt, ', ');
+        publicationDate = utils.sliceString(publicationDate);
+        publicationDate = utils.insertSubString(publicationDate.length-5, publicationDate, ', ');
 
         newsCard.querySelector('.card-image').src = (data.urlToImage == null) || (data.urlToImage == "") 
                                                     ? require('../../images/not-img.png').default 
@@ -42,7 +41,7 @@ export default class NewsCard {
         newsCard.querySelector('.card-text').textContent = (data.description);
         newsCard.querySelector('.card-link').textContent = data.source.name;
         newsCard.querySelector('.card-link').href = data.url;
-        newsCard.querySelector('.data').textContent = publishedAt;
+        newsCard.querySelector('.data').textContent = publicationDate;
 
         return newsCard;
     }
