@@ -20,8 +20,7 @@ export default class AgrigateAnalytics {
                 const day = new Date(item.publishedAt);
                 
                 switch (day.getDay()) {
-                    case 0:
-
+                    case 1:
                         if (this._isUndefined(agrigateData.monday)) {
                             agrigateData.monday = { title: 0, description: 0 }
                         }
@@ -31,7 +30,7 @@ export default class AgrigateAnalytics {
 
                         break;
 
-                    case 1:
+                    case 2:                    
                         if (this._isUndefined(agrigateData.tuesday)) {
                             agrigateData.tuesday = { title: 0, description: 0 }
                         }
@@ -40,7 +39,7 @@ export default class AgrigateAnalytics {
                         agrigateData.tuesday.date = item.publishedAt;
                         break;
 
-                    case 2:
+                    case 3:
                         if (this._isUndefined(agrigateData.wednesday)) {
                             agrigateData.wednesday = { title: 0, description: 0 }
                         }
@@ -49,7 +48,7 @@ export default class AgrigateAnalytics {
                         agrigateData.wednesday.date = item.publishedAt;
                         break;
 
-                    case 3:
+                    case 4:
                         if (this._isUndefined(agrigateData.thursday)) {
                             agrigateData.thursday = { title: 0, description: 0 }
                         }
@@ -58,7 +57,7 @@ export default class AgrigateAnalytics {
                         agrigateData.thursday.date = item.publishedAt;
                         break;
 
-                    case 4:
+                    case 5:
                         if (this._isUndefined(agrigateData.friday)) {
                             agrigateData.friday = { title: 0, description: 0 }
                         }
@@ -67,7 +66,7 @@ export default class AgrigateAnalytics {
                         agrigateData.friday.date = item.publishedAt;
                         break;
 
-                    case 5:
+                    case 6:
                         if (this._isUndefined(agrigateData.saturday)) {
                             agrigateData.saturday = { title: 0, description: 0 }
                         }
@@ -76,7 +75,7 @@ export default class AgrigateAnalytics {
                         agrigateData.saturday.date = item.publishedAt;
                         break;
 
-                    case 6:
+                    case 0:
                         if (this._isUndefined(agrigateData.sunday)) {
                             agrigateData.sunday = { title: 0, description: 0 }
                         }
@@ -94,6 +93,8 @@ export default class AgrigateAnalytics {
 
         this._calculationPercent(agrigateData);
         
+        console.log(agrigateData);
+
         return agrigateData;
     }
 
@@ -149,7 +150,7 @@ export default class AgrigateAnalytics {
             if (badkey.indexOf(day) == -1) {   
 
                 const totalDay = week[day].total;
-                week[day].percent = Math.trunc((totalDay / week.total) * 100), day;
+                week[day].percent = totalDay == 0 ? 0 :  Math.trunc((totalDay / week.total) * 100), day;
             }
         });
     }
