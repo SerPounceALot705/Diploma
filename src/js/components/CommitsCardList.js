@@ -6,10 +6,9 @@ export default class CommitsCardList {
     }
 
     render(data) {
-        data.forEach(item => {
-            this._appendCommitsCard(item);
-        });
-        
+        data.forEach(commitCard => {
+            this._appendCommitsCard(commitCard);
+        });        
     }
 
     _appendCommitsCard(data) {

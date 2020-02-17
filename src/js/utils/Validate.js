@@ -4,7 +4,7 @@ export default class Validity {
     }
 
     isValid() {
-        let invalidities = [];
+        const invalidities = [];
         
         if (this.input.validity.valid == false) {
         

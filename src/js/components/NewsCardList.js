@@ -6,8 +6,8 @@ export default class NewsCardList {
     }
 
     render(data) {  
-        data.forEach(item => {
-            this._appendCard(item);
+        data.forEach(newsCard => {
+            this._appendCard(newsCard);
         })    
     }
 

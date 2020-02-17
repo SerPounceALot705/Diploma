@@ -10,7 +10,7 @@ export default class AgrigateAnalytics {
     }
 
     getAgrigateData() {
-        let agrigateData = {};
+        const agrigateData = {};
 
         const data = this.localStorage.getData('cardsArray');
         const requestText = this.localStorage.getData('requestText');
