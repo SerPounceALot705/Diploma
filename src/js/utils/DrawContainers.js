@@ -48,20 +48,29 @@ export default class DrawContainers {
 
     applyButton() {
         const data = this.storage.getData('cardsArray');
+        const isPagination = this.storage.getData('isPagination');
 
-        if (data != null && data.articles.length > 3) {
+        if (data != null && data.articles.length > 3 && isPagination) {
+            
             const buttonTemplate = '<button class="searching-results__button">Показать еще</button>';
             this.container.insertAdjacentHTML('beforeend', buttonTemplate.trim());
 
             this.container.querySelector(".searching-results__button").addEventListener('click', (event) => {
                 this._pagination();
                 this.applyNewsCards();
+                
                 event.target.blur();
 
-                if (Math.trunc(data.articles.length / 3) == this.page - 1) {
+                const pagination = this.storage.getData('pagination');
+
+                if (data.articles.length <= pagination.skip + 3) {
                     this.removeButton();
+                    this.storage.setData('isPagination', false);
+                } else 
+                {
+                    this.storage.setData('isPagination', true);
                 }
-            });
+            });    
         }
     } 
 
@@ -70,6 +79,7 @@ export default class DrawContainers {
         const data = this.storage.getData('cardsArray');
        
         if (data != null && data.articles.length > 0) {
+            this.saveRequest();
             this.applyHeaderCards();
             this.applyButton();
 
@@ -101,5 +111,10 @@ export default class DrawContainers {
         pagination.skip = (pagination.page - 1) * pagination.take;
 
         this.storage.setData('pagination', pagination);  
+    }
+
+    saveRequest() {
+        const text = this.storage.getData('requestText');
+        document.querySelector('.header__input').value = text;
     }
 }

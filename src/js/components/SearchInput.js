@@ -41,12 +41,14 @@ export default class SearchInput {
                         this.storage.setData('cardsArray', result);
                         this.storage.setData('pagination', { page: 1, take: 3, skip: 0 });
                         this.storage.setData('requestText', text);
+            
+                        result.articles.length > 3 ? this.storage.setData('isPagination', true)
+                                                   : this.storage.setData('isPagination', false);
                         
                         this.draw.applyHeaderCards();
                         this.draw.applyButton();
                         this.draw.applyNewsCards();
                     }
-
                     this.draw.toggleDisabledElement(event.target.elements.text);
                     this.draw.toggleDisabledElement(event.target.elements.submit);
                 })
