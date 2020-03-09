@@ -1,12 +1,13 @@
 import Utils from './Utils';
 import LocalStorageApi from '../modules/LocalStorageApi';
-import NewsCardList from '../components/NewsCardList';
+import NewsCardList from '../components/Cards/NewsCardList';
+import NewsCard from '../components/Cards/NewsCard';
 
 export default class DrawContainers {
-    constructor(container) {
+    constructor(_container) {
         this.utils = new Utils();
         this.storage = new LocalStorageApi();
-        this.container = container;
+        this.container = _container;
     }
 
     applyLoader() {
@@ -20,15 +21,16 @@ export default class DrawContainers {
         this.container.style.minHeight = '282px';
     }
         
-    applyBadResult(text) {
+    applyBadResult(title, message) {
         this.utils.removeChild(this.container);
         const template = `
             <img class="search-box__result" src="" alt="результаты поиска по запросу">
-            <p class="search-box__report">Ничего не найдено</p>
+            <p class="search-box__report"></p>
             <h2 class="search-box__message"></h2>`;
         
         this.container.insertAdjacentHTML('beforeend', template.trim());
-        document.querySelector('.search-box__message').textContent = text;
+        document.querySelector('.search-box__report').textContent = title;
+        document.querySelector('.search-box__message').textContent = message;
         this.container.querySelector('.search-box__result').src = require('../../images/not-found_v1.png').default;
     }
 
@@ -83,7 +85,7 @@ export default class DrawContainers {
             this.applyHeaderCards();
             this.applyButton();
 
-            const cardNewsList = new NewsCardList(document.getElementById('searching-results'));
+            const cardNewsList = new NewsCardList(document.getElementById('searching-results'), new NewsCard(new Utils()));
             cardNewsList.render(data.articles.slice(0, pagination.page * pagination.take));     
         }   
     }
@@ -96,7 +98,7 @@ export default class DrawContainers {
         const pagination = this.storage.getData('pagination');
         const data = this.storage.getData('cardsArray');
 
-        const cardNewsList = new NewsCardList(document.getElementById('searching-results'));
+        const cardNewsList = new NewsCardList(document.getElementById('searching-results'), new NewsCard(new Utils()));
         cardNewsList.render(data.articles.slice(pagination.skip, pagination.skip + 3));
     }
 
