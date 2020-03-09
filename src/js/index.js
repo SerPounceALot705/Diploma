@@ -1,10 +1,10 @@
 import '../css/index.css';
 
-import SearchInput from './components/SearchInput';
+import SearchInput from './components/Cards/SearchInput';
 import Validate from './utils/Validate';
 import DrawContainers from './utils/DrawContainers';
 
-const input = document.forms.search.elements.text;
+const input = document.querySelector('.header__input');
 const validity = new Validate(input);
 
 input.addEventListener('focus', () => validity.isValid());

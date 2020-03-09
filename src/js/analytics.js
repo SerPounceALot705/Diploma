@@ -1,6 +1,6 @@
 import '../css/analytics.css';
 import DrawAnalytics from './utils/DrawAnalytics';
-import AgrigateAnalytics from './components/AgrigateAnalytics';
+import AgrigateAnalytics from './components/Analytics/AgrigateAnalytics';
 import LocalStorageApi from './modules/LocalStorageApi';
 
 const drawAnalytics = new DrawAnalytics();
