@@ -1,6 +1,8 @@
-import GitHubApi from '../modules/GitHubApi';
+import GitHubApi from '../../modules/GitHubApi';
 import CommitsCardList from './CommitsCardList';
-import GlideInit from '../utils/GlideInit';
+import GlideInit from '../../utils/GlideInit';
+import CommitsCard from './CommitsCard';
+import Utils from '../../utils/Utils';
 
 export default class CommitsCarousel {
     constructor() {
@@ -20,7 +22,7 @@ export default class CommitsCarousel {
     }
 
     _applyCommitsCard() {
-        const commitsCardList = new CommitsCardList(document.querySelector('.glide__slides'));
+        const commitsCardList = new CommitsCardList(document.querySelector('.glide__slides'), new CommitsCard(new Utils()));
         commitsCardList.render(this.commits);
     }
 }

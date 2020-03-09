@@ -1,8 +1,8 @@
-import NewsApi from '../modules/NewsApi';
-import Utils from '../utils/Utils';
-import LocalStorageApi from '../modules/LocalStorageApi';
-import DrawContainers from '../utils/DrawContainers';
-import { API_KEY } from '../constants/Constants';
+import NewsApi from '../../modules/NewsApi';
+import Utils from '../../utils/Utils';
+import LocalStorageApi from '../../modules/LocalStorageApi';
+import DrawContainers from '../../utils/DrawContainers';
+import { API_KEY } from '../../constants/Constants';
 
 export default class SearchInput {
     constructor() {
@@ -35,7 +35,7 @@ export default class SearchInput {
                     this.storage.deleteData('requestText');
 
                     if (result.articles.length == 0) {
-                        this.draw.drawContainers('К сожалению по вашему запросу ничего не найдено.');
+                        this.draw.applyBadResult( 'Ничего не найдено', 'К сожалению по вашему запросу ничего не найдено.');
                     }
                     else {
                         this.storage.setData('cardsArray', result);
@@ -53,7 +53,7 @@ export default class SearchInput {
                     this.draw.toggleDisabledElement(event.target.elements.submit);
                 })
                 .catch( () => {
-                    this.draw.applyBadResult(`Во время запроса произошла ошибка. Подождите немного и попробуйте ещё раз`);
+                    this.draw.applyBadResult('Ошибка', `Во время запроса произошла ошибка. Подождите немного и попробуйте ещё раз`);
                     this.draw.toggleDisabledElement(event.target.elements.text);
                     this.draw.toggleDisabledElement(event.target.elements.submit);
                 });

@@ -1,4 +1,4 @@
-import LocalStorage from '../modules/LocalStorageApi';
+import LocalStorage from '../../modules/LocalStorageApi';
 
 export default class AgrigateAnalytics {
     constructor() {
@@ -92,9 +92,6 @@ export default class AgrigateAnalytics {
         agrigateData.total = agrigateData.totalTitle + agrigateData.totalDescription;
 
         this._calculationPercent(agrigateData);
-        
-        console.log(agrigateData);
-
         return agrigateData;
     }
 

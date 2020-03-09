@@ -1,20 +1,18 @@
-import CommitsCard from '../components/CommitsCard';
 
 export default class CommitsCardList {
-    constructor(container) {
+    constructor(container, commitsCard) {
+        this.commitsCard = commitsCard;
         this.container = container;
     }
 
-    render(data) {
-        data.forEach(commitCard => {
+    render(commitsCards) {
+        commitsCards.forEach(commitCard => {
             this._appendCommitsCard(commitCard);
         });        
     }
 
     _appendCommitsCard(data) {
-        const commitsCard = new CommitsCard()
-
-        const commit = commitsCard.create(data);
+        const commit = this.commitsCard.create(data);
         this.container.appendChild(commit);
     }
 
