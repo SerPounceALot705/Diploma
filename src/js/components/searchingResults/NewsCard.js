@@ -1,9 +1,9 @@
-export default class NewsCard {
-    constructor (_utils) {
-        this.utils = _utils;
-    }
+import Utils from '../../utils/Utils';
 
-    create(data) {
+export default class NewsCard {
+    constructor () { }
+
+    static create(data) {
         const newsCard = document.createElement("div");
         newsCard.classList.add("card");
         
@@ -26,8 +26,8 @@ export default class NewsCard {
                 day: 'numeric'
             });
             
-        publicationDate = this.utils.sliceString(publicationDate);
-        publicationDate = this.utils.insertSubString(publicationDate.length-5, publicationDate, ', ');
+        publicationDate = Utils.sliceString(publicationDate);
+        publicationDate = Utils.insertSubString(publicationDate.length-5, publicationDate, ', ');
 
         newsCard.querySelector('.card-image').src = (data.urlToImage == null) || (data.urlToImage == "") 
                                                     ? require('../../../images/not-img.png').default 

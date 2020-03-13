@@ -1,16 +1,15 @@
 export default class LocalStorageApi {
     constructor() {}
 
-    setData(key, data) {
+    static setData(key, data) {
         localStorage.setItem(key, JSON.stringify(data)); 
     }
 
-    getData(key) {
+    static getData(key) {
         return JSON.parse(localStorage.getItem(key));
     }
 
-    deleteData(key) {
+    static deleteData(key) {
         localStorage.removeItem(key);
     }
-
 }

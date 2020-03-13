@@ -1,17 +1,16 @@
 import '../css/index.css';
 
-import SearchInput from './components/Cards/SearchInput';
+import SearchInput from './components/searchingResults/SearchInput';
 import Validate from './utils/Validate';
-import DrawContainers from './utils/DrawContainers';
+import Draw from './utils/DrawContainers';
 
 const input = document.querySelector('.header__input');
 const validity = new Validate(input);
+const search = new SearchInput();
 
 input.addEventListener('focus', () => validity.isValid());
 input.addEventListener('input', () => validity.isValid());
 
-const draw = new DrawContainers(document.querySelector('.search-box'));
-draw.applyIndex();
+Draw.applyIndex(document.querySelector('.search-box'));
 
-document.forms.search.addEventListener('submit', event => new SearchInput().getNews(event));   
-
+document.querySelector('.header__container-search-string').addEventListener('submit', event => search.getNews(event));   

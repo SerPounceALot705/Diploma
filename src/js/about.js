@@ -1,5 +1,4 @@
 import '../css/about.css';
-import CommitsCard from './components/Commits/CommitCarousel';
-import Utils from './utils/Utils';
+import CommitsCard from './components/history/CommitCarousel';
 
-const commitsCard = new CommitsCard(new Utils());
+const commitsCard = new CommitsCard();

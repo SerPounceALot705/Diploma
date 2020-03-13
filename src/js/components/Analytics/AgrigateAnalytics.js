@@ -1,24 +1,22 @@
 import LocalStorage from '../../modules/LocalStorageApi';
 
 export default class AgrigateAnalytics {
-    constructor() {
-        this.localStorage = new LocalStorage();
-    }
+    constructor() { }
 
     getTotalResults() {
-        return this.localStorage.getData('cardsArray').totalResults;
+        return LocalStorage.getData('cardsArray').totalResults;
     }
 
     getAgrigateData() {
         const agrigateData = {};
 
-        const data = this.localStorage.getData('cardsArray');
-        const requestText = this.localStorage.getData('requestText');
+        const data = LocalStorage.getData('cardsArray');
+        const requestText = LocalStorage.getData('requestText');
 
         if (data != null) {
             data.articles.forEach(item => {
                 const day = new Date(item.publishedAt);
-                
+
                 switch (day.getDay()) {
                     case 1:
                         if (this._isUndefined(agrigateData.monday)) {
@@ -30,7 +28,7 @@ export default class AgrigateAnalytics {
 
                         break;
 
-                    case 2:                    
+                    case 2:
                         if (this._isUndefined(agrigateData.tuesday)) {
                             agrigateData.tuesday = { title: 0, description: 0 }
                         }
@@ -113,12 +111,12 @@ export default class AgrigateAnalytics {
     }
 
     _textRequestCount(subString, text) {
-        
+
         let count = 0;
 
-        if (text != null) {        
+        if (text != null) {
             let regExp = new RegExp(subString.toLowerCase(), 'g');
-            count = [...text.toLowerCase().matchAll(regExp)].length;            
+            count = [...text.toLowerCase().matchAll(regExp)].length;
         }
 
         return count;
@@ -131,8 +129,8 @@ export default class AgrigateAnalytics {
 
         Object.keys(week).forEach(day => {
 
-            if (badkey.indexOf(day) == -1) {   
-                count += week[day][type];   
+            if (badkey.indexOf(day) == -1) {
+                count += week[day][type];
             }
         });
 
@@ -140,14 +138,14 @@ export default class AgrigateAnalytics {
     }
 
     _calculationPercent(week) {
-        
+
         const badkey = ['totalTitle', 'totalDescription', 'total']
 
         Object.keys(week).forEach(day => {
-            if (badkey.indexOf(day) == -1) {   
+            if (badkey.indexOf(day) == -1) {
 
                 const totalDay = week[day].total;
-                week[day].percent = totalDay == 0 ? 0 :  Math.trunc((totalDay / week.total) * 100), day;
+                week[day].percent = totalDay == 0 ? 0 : Math.trunc((totalDay / week.total) * 100), day;
             }
         });
     }

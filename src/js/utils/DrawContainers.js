@@ -1,41 +1,37 @@
 import Utils from './Utils';
-import LocalStorageApi from '../modules/LocalStorageApi';
-import NewsCardList from '../components/Cards/NewsCardList';
-import NewsCard from '../components/Cards/NewsCard';
+import LocalStorage from '../modules/LocalStorageApi';
+import NewsCardList from '../components/searchingResults/NewsCardList';
+
 
 export default class DrawContainers {
-    constructor(_container) {
-        this.utils = new Utils();
-        this.storage = new LocalStorageApi();
-        this.container = _container;
-    }
+    constructor() { }
 
-    applyLoader() {
-        this.utils.removeChild(this.container); 
+    static applyLoader(container) {
+        Utils.removeChild(container); 
         const template = `
             <img class="search-box__loading" src="" alt="прелоудер сайта">
             <h2 class="search-box__message">Идет поиск новостей...</h2>`;
 
-        this.container.insertAdjacentHTML('beforeend', template.trim());
-        this.container.querySelector('.search-box__loading').src = require('../../images/Ellipse.png').default;
-        this.container.style.minHeight = '282px';
+        container.insertAdjacentHTML('beforeend', template.trim());
+        container.querySelector('.search-box__loading').src = require('../../images/Ellipse.png').default;
+        container.style.minHeight = '282px';
     }
         
-    applyBadResult(title, message) {
-        this.utils.removeChild(this.container);
+    static applyBadResult(container ,title, message) {
+        Utils.removeChild(container);
         const template = `
             <img class="search-box__result" src="" alt="результаты поиска по запросу">
             <p class="search-box__report"></p>
             <h2 class="search-box__message"></h2>`;
         
-        this.container.insertAdjacentHTML('beforeend', template.trim());
+        container.insertAdjacentHTML('beforeend', template.trim());
         document.querySelector('.search-box__report').textContent = title;
         document.querySelector('.search-box__message').textContent = message;
-        this.container.querySelector('.search-box__result').src = require('../../images/not-found_v1.png').default;
+        container.querySelector('.search-box__result').src = require('../../images/not-found_v1.png').default;
     }
 
-    applyHeaderCards() {
-        this.utils.removeChild(this.container);
+    static applyHeaderCards(container) {
+        Utils.removeChild(container);
         const template = `
             <div class="searching-results">
                 <div class="searching-results__container-analitics">
@@ -45,78 +41,80 @@ export default class DrawContainers {
                 <div class="searching-results__container" id='searching-results'></div>
             </div>`;
 
-        this.container.insertAdjacentHTML('beforeend', template.trim());         
+        container.insertAdjacentHTML('beforeend', template.trim());         
     }
 
-    applyButton() {
-        const data = this.storage.getData('cardsArray');
-        const isPagination = this.storage.getData('isPagination');
+    static applyButton(container) {
+        const data = LocalStorage.getData('cardsArray');
+        const isPagination = LocalStorage.getData('isPagination');
+        const skipCards = 3;
 
-        if (data != null && data.articles.length > 3 && isPagination) {
+        if (data != null && data.articles.length > skipCards && isPagination) {
             
             const buttonTemplate = '<button class="searching-results__button">Показать еще</button>';
-            this.container.insertAdjacentHTML('beforeend', buttonTemplate.trim());
+            container.insertAdjacentHTML('beforeend', buttonTemplate.trim());
 
-            this.container.querySelector(".searching-results__button").addEventListener('click', (event) => {
+            container.querySelector(".searching-results__button").addEventListener('click', (event) => {
                 this._pagination();
                 this.applyNewsCards();
                 
                 event.target.blur();
 
-                const pagination = this.storage.getData('pagination');
+                const pagination = LocalStorage.getData('pagination');
 
-                if (data.articles.length <= pagination.skip + 3) {
-                    this.removeButton();
-                    this.storage.setData('isPagination', false);
+                if (data.articles.length <= pagination.skip + skipCards) {
+                    this.removeButton(container);
+                    LocalStorage.setData('isPagination', false);
                 } else 
                 {
-                    this.storage.setData('isPagination', true);
+                    LocalStorage.setData('isPagination', true);
                 }
             });    
         }
     } 
 
-    applyIndex() {     
-        const pagination = this.storage.getData('pagination');
-        const data = this.storage.getData('cardsArray');
+    static applyIndex(container) {     
+        const pagination = LocalStorage.getData('pagination');
+        const data = LocalStorage.getData('cardsArray');
        
         if (data != null && data.articles.length > 0) {
             this.saveRequest();
-            this.applyHeaderCards();
-            this.applyButton();
+            this.applyHeaderCards(container);
+            this.applyButton(container);
 
-            const cardNewsList = new NewsCardList(document.getElementById('searching-results'), new NewsCard(new Utils()));
-            cardNewsList.render(data.articles.slice(0, pagination.page * pagination.take));     
+            const cardList = data.articles.slice(0, pagination.page * pagination.take);
+            NewsCardList.render(cardList, document.getElementById('searching-results'));     
         }   
     }
 
-    removeButton() {
-        this.container.removeChild(this.container.querySelector(".searching-results__button"));
+    static removeButton(container) {
+        container.removeChild(container.querySelector(".searching-results__button"));
     }
 
-    applyNewsCards() {
-        const pagination = this.storage.getData('pagination');
-        const data = this.storage.getData('cardsArray');
+    static applyNewsCards() {
+        const pagination = LocalStorage.getData('pagination');
+        const data = LocalStorage.getData('cardsArray');
+        const skipCards = 3;
 
-        const cardNewsList = new NewsCardList(document.getElementById('searching-results'), new NewsCard(new Utils()));
-        cardNewsList.render(data.articles.slice(pagination.skip, pagination.skip + 3));
+        const cardList = data.articles.slice(pagination.skip, pagination.skip + skipCards);
+        NewsCardList.render(cardList, document.getElementById('searching-results'));     
     }
 
-    toggleDisabledElement(element) {
+    static toggleDisabledElement(element) {
         element.disabled = !element.disabled;
     }
 
-    _pagination() {
-        const pagination = this.storage.getData('pagination');
+    static saveRequest() {
+        const text = LocalStorage.getData('requestText');
+        document.querySelector('.header__input').value = text;
+    }
+
+    static _pagination() {
+        const pagination = LocalStorage.getData('pagination');
 
         pagination.page += 1;
         pagination.skip = (pagination.page - 1) * pagination.take;
 
-        this.storage.setData('pagination', pagination);  
-    }
-
-    saveRequest() {
-        const text = this.storage.getData('requestText');
-        document.querySelector('.header__input').value = text;
+        LocalStorage.setData('pagination', pagination);  
     }
 }

@@ -1,19 +1,21 @@
 import Glide from '@glidejs/glide'
 
 export default class GlideInit {
-    constructor() {
+    constructor() { }
+
+    static Init() {
         new Glide('.glide', {
             type: 'carousel',
             focusAt: 'center',
             perView: 4,
             breakpoints: {
                 1280: {
-                    perView : 3
+                    perView: 3
                 },
-                1024 : {
-                    perView : 2
+                1024: {
+                    perView: 2
                 },
-                767: 
+                767:
                 {
                     perView: 1
                 },
@@ -21,6 +23,6 @@ export default class GlideInit {
                     perView: 1
                 }
             }
-        }).mount()    
+        }).mount()
     }
 }

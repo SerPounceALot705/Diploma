@@ -1,10 +1,9 @@
+import Utils from '../../utils/Utils';
 
 export default class CommitsCard {
-    constructor(_utils) {
-        this.utils = _utils; 
-    }
+    constructor() { }
     
-    create(commit) {
+    static create(commit) {
         const commitCard = document.createElement('div');
         commitCard.classList.add('glide__slide');
 
@@ -28,8 +27,8 @@ export default class CommitsCard {
                 day: 'numeric'
             });
 
-        commitDate = this.utils.sliceString(commitDate);
-        commitDate = this.utils.insertSubString(commitDate.length-5, commitDate, ', ');    
+        commitDate = Utils.sliceString(commitDate);
+        commitDate = Utils.insertSubString(commitDate.length-5, commitDate, ', ');    
 
         commitCard.querySelector('.glide__date').textContent = commitDate;
         commitCard.querySelector('.glide__img').src = commit.author.avatar_url;

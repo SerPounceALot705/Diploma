@@ -3,7 +3,7 @@ import {GITHUB_URL} from '../constants/Constants';
 export default class GitHubApi {
     constructor() {}
 
-    getCommits(){
+    static getCommits(){
         return new Promise((resolve, reject) => {
             fetch(GITHUB_URL)
             .then(result => {
