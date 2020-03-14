@@ -1,6 +1,6 @@
 .searching-results__container {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     grid-row-gap: 16px;
     grid-column-gap: 16px;
@@ -19,7 +19,7 @@
 @media screen and (max-width: 767px) and (min-width: 425px) {
     .searching-results__container {
         max-width: 767px;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
         grid-template-columns: 1fr;
     }
 }
@@ -27,7 +27,7 @@
 @media screen and (max-width: 425px) {
     .searching-results__container {
         max-width: 425px;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
         grid-template-columns: 1fr;
     }
 }

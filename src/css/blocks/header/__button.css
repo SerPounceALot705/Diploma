@@ -16,6 +16,19 @@
     height: 64px;
 }
 
+.header__button:disabled {
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+}
+
+.header__button:hover:disabled {
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+}
+
+
 .header__button:hover {
     background: #347EFF;
     cursor: pointer;
