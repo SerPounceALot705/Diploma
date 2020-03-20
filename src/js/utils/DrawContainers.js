@@ -1,10 +1,8 @@
 import Utils from './Utils';
 import LocalStorage from '../modules/LocalStorageApi';
-import NewsCardList from '../components/searchingResults/NewsCardList';
-
 
 export default class DrawContainers {
-    constructor() { }
+    constructor() {}
 
     static applyLoader(container) {
         Utils.removeChild(container); 
@@ -44,7 +42,7 @@ export default class DrawContainers {
         container.insertAdjacentHTML('beforeend', template.trim());         
     }
 
-    static applyButton(container) {
+    static applyButton(container, newsCardList) {
         const data = LocalStorage.getData('cardsArray');
         const isPagination = LocalStorage.getData('isPagination');
         const skipCards = 3;
@@ -55,8 +53,8 @@ export default class DrawContainers {
             container.insertAdjacentHTML('beforeend', buttonTemplate.trim());
 
             container.querySelector(".searching-results__button").addEventListener('click', (event) => {
-                this._pagination();
-                this.applyNewsCards();
+                this._pagination();               
+                this.applyNewsCards(newsCardList);
                 
                 event.target.blur();
 
@@ -73,17 +71,17 @@ export default class DrawContainers {
         }
     } 
 
-    static applyIndex(container) {     
+    static applyIndex(container, newsCardList) {     
         const pagination = LocalStorage.getData('pagination');
         const data = LocalStorage.getData('cardsArray');
        
         if (data != null && data.articles.length > 0) {
             this.saveRequest();
             this.applyHeaderCards(container);
-            this.applyButton(container);
+            this.applyButton(container, newsCardList);
 
             const cardList = data.articles.slice(0, pagination.page * pagination.take);
-            NewsCardList.render(cardList, document.getElementById('searching-results'));     
+            newsCardList.render(cardList, document.querySelector('#searching-results'));     
         }   
     }
 
@@ -91,13 +89,14 @@ export default class DrawContainers {
         container.removeChild(container.querySelector(".searching-results__button"));
     }
 
-    static applyNewsCards() {
+    static applyNewsCards(newsCardList) {
         const pagination = LocalStorage.getData('pagination');
         const data = LocalStorage.getData('cardsArray');
         const skipCards = 3;
 
         const cardList = data.articles.slice(pagination.skip, pagination.skip + skipCards);
-        NewsCardList.render(cardList, document.getElementById('searching-results'));     
+        const container = document.querySelector('#searching-results');
+        newsCardList.render(cardList, container);     
     }
 
     static toggleDisabledElement(element) {
