@@ -1,11 +1,11 @@
-import CommitsCard from './CommitsCard';
-
 export default class CommitsCardList {
-    constructor() { }
+    constructor(_commitCard) {
+        this.commitCard = _commitCard;
+    }
 
-    static render(container, commitsCards) {
+    render(container, commitsCards) {
         commitsCards.forEach(commitCard => {
-            const commit = CommitsCard.create(commitCard);
+            const commit = this.commitCard.create(commitCard);
             container.appendChild(commit);
         });
     }

@@ -15,7 +15,8 @@ export default class Utils {
     }
 
     static sliceString(data) {
-      return data.slice(0, data.length - 3);
+      const  chars = 3;
+      return data.slice(0, data.length - chars);
     }
 
     static insertSubString(start, str, substr) {

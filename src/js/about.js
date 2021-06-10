@@ -1,4 +1,6 @@
 import '../css/about.css';
-import CommitsCard from './components/history/CommitCarousel';
+import CommitsCarousel from './components/history/CommitCarousel';
 
-const commitsCard = new CommitsCard();
+const commitsCarousel = new CommitsCarousel();
+commitsCarousel.getCommits();
+

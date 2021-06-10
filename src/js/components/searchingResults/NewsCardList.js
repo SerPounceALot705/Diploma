@@ -1,11 +1,11 @@
-import NewsCard from './NewsCard';
-
 export default class NewsCardList {
-    constructor() { }
+    constructor(_newsCard) {
+        this.newsCard = _newsCard; 
+    }
 
-    static render(newsCards, container) {
+    render(newsCards, container) {
         newsCards.forEach(newsCard => {
-            const card = NewsCard.create(newsCard);
+            const card = this.newsCard.create(newsCard);
             container.appendChild(card);
         });
     }

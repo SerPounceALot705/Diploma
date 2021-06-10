@@ -2,11 +2,14 @@ import Api from '../../modules/NewsApi';
 import Utils from '../../utils/Utils';
 import LocalStorage from '../../modules/LocalStorageApi';
 import Draw from '../../utils/DrawContainers';
+import NewsCardList from '../searchingResults/NewsCardList';
+import NewsCard from '../searchingResults/NewsCard';
 import { API_KEY } from '../../constants/Constants';
 
 export default class SearchInput {
-    constructor() {
+    constructor(_newsCardList) {
         this.searchBox = document.querySelector('.search-box');
+        this.newsCardList = _newsCardList;
     }
 
     getNews(event) {
@@ -44,8 +47,8 @@ export default class SearchInput {
                         : LocalStorage.setData('isPagination', false);
 
                     Draw.applyHeaderCards(this.searchBox);
-                    Draw.applyButton(this.searchBox);
-                    Draw.applyNewsCards();
+                    Draw.applyButton(this.searchBox, this.newsCardList);
+                    Draw.applyNewsCards(this.newsCardList);
                 }
                 Draw.toggleDisabledElement(event.target.elements.text);
                 Draw.toggleDisabledElement(event.target.elements.submit);
